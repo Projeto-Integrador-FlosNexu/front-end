@@ -3,7 +3,8 @@ import Home from './pages/home/Home';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Login from './pages/login/Login'; -> COLOQUEM DEPOIS QUE CRIAR O ARQUIVO DE LOGIN
+import Login from './pages/login/Login';
+import About from './pages/about/About';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Home />} />
-           
+              <Route path="/login" element={<Login />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </div>
           <Footer />
