@@ -6,3 +6,36 @@
     background-size: cover;
     background-position: center;
   }
+
+  .bg-login {
+    background-color: #228B22;
+    
+  }
+  .line-h {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+ .hr-login {
+    
+    position: relative;
+    z-index: 100;
+    margin-top: -10px;
+    margin-bottom: 0px;    
+ }
+
+ .texto-login {
+    border-radius: 25px;
+    font-size: 14px;
+    position: relative;
+    z-index: 200;
+    left: 29%;
+    z-index: 200;
+    background-color: white;
+    max-width: 135px;
+    color: rgb(69, 72, 75);
+  }
+
+  .border-f {
+    border-color: #228B22 !important;
+  }
