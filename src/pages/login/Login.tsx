@@ -1,85 +1,94 @@
-// Login.tsx
-
-import React, { useState } from 'react';
+import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
-const Login: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+import { Link, useNavigate } from 'react-router-dom';
 
-  const handleLogin = () => {
-    // Lógica de autenticação aqui
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // Adicionar aqui a lógica de autenticação real, como fazer uma chamada à API
-  };
+import { AuthContext } from '../../contexts/AuthContext';
+import UsuarioLogin from '../../models/UsuarioLogin';
+import { RotatingLines } from 'react-loader-spinner';
+
+function Login() {
+  let navigate = useNavigate();
+
+  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
+    {} as UsuarioLogin
+  );
+
+  const { usuario, handleLogin } = useContext(AuthContext);
+
+  const {isLoading} = useContext(AuthContext) 
+
+  useEffect(() => {
+    if (usuario.token !== "") {
+        navigate('/home')
+    }
+}, [usuario])
+
+function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
+  setUsuarioLogin({
+      ...usuarioLogin,
+      [e.target.name]: e.target.value
+  })
+}
+
+function login(e: ChangeEvent<HTMLFormElement>) {
+  e.preventDefault()
+  handleLogin(usuarioLogin)
+}
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="bg-[white] p-8 rounded shadow-md w-96">
-        <h2 className="text-1xl font-bold mb-6 text-center">Entre na sua conta</h2>
-        <form>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-              Email
-            </label>
+    <>
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
+          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+          <div className="flex flex-col w-full">
+            <label htmlFor="usuario">Usuário</label>
             <input
-              type="email"
-              id="email"
-              className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
-              placeholder="Digite seu email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              id="usuario"
+              name="usuario"
+              placeholder="Usuario"
+              className="border-2 border-slate-700 rounded p-2"
+              value={usuarioLogin.usuario} 
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-              Senha
-            </label>
+          <div className="flex flex-col w-full">
+            <label htmlFor="senha">Senha</label>
             <input
               type="password"
-              id="password"
-              className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
-              placeholder="Digite sua senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              id="senha"
+              name="senha"
+              placeholder="Senha"
+              className="border-2 border-slate-700 rounded p-2"
+              value={usuarioLogin.senha} 
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button
-            type="button"
-            className="w-full bg-green-600 
-            text-white my-3 py-2 px-4 
-            rounded-md hover:bg-green-500 
-            focus:outline-none focus:bg-green-500 
-            transition duration-500 ease-in-out"
-            onClick={handleLogin}
-          >
-            <b>Entrar</b>
-          </button>
-          <div className='mt-3 '>
-            <p className=' w-full texto-login px-1 text-center '>
-              <b>Não tem conta?</b>
-            </p>
-            <hr className='hr-login mb-3 border-slate-300 w-full' />
-          </div>
-          <button
-            type="button"
-            className="w-full bg-white text-green-600 
-            my-3 py-2 px-4 rounded-md 
-            hover:bg-green-600 
-            hover:text-white  
-            focus:bg-green-600 border 
-            border-green-600 transition 
-            duration-500 ease-in-out"
-            onClick={handleLogin}
-           >
-            <b>Cadastre-se</b>
+          <button  type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+           {isLoading ? <RotatingLines
+            strokeColor="white"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="24"
+            visible={true}
+          /> :
+            <span>Entrar</span>}
           </button>
 
+          <hr className="border-slate-800 w-full" />
+
+          <p>
+            Ainda não tem uma conta?{' '}
+            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+              Cadastre-se
+            </Link>
+          </p>
         </form>
+        <div className="fundoLogin hidden lg:block"></div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default Login;
