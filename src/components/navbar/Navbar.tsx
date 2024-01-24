@@ -7,13 +7,11 @@ function Navbar() {
     <>
      <div className='w-full bg-[#3CB371] text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>FlosNexu</div>
+            <Link to='/home' className='text-2xl font-bold uppercase'>FlosNexu</Link>
 
             <div className='flex gap-4'>
-              <Link to='/login' className='hover:underline'>Login</Link>
-              <Link to='/home' className='hover:underline'>Home</Link>
               <Link to='/about' className='hover:underline'>About</Link>
-              <Link to='/cadastro' className='hover:underline'>Cadqastro</Link>
+              <Link to='/cadastro' className='hover:underline'>Cadastro</Link>
               <div className='hover:underline'>Produtos</div>
               <div className='hover:underline'>Categorias</div>
               <div className='hover:underline'>Perfil</div>
