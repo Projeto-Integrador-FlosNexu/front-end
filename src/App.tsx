@@ -5,14 +5,14 @@ import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login';
 import About from './pages/about/About';
-import UserProvider from './contexts/UserContext';
 import Cadastro from './pages/cadastro/Cadastro';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
     <>
-    <UserProvider>
-    <BrowserRouter>
+        <AuthProvider>
+        <BrowserRouter>
         <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
@@ -25,7 +25,7 @@ function App() {
           </div>
           <Footer />
         </BrowserRouter>
-        </UserProvider>
+        </AuthProvider>
     </>
 );
 }

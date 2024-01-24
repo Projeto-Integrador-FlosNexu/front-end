@@ -24,7 +24,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
         senha: "",
         foto: "",
         tipo: "",
-        usuario: "",
         token: ""
     })
 
@@ -32,6 +31,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     async function handleLogin(userLogin: UsuarioLogin) {
         setIsLoading(true)
+        console.log(userLogin)
         try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
             alert("Usuário logado com sucesso")
@@ -47,13 +47,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
     function handleLogout() {
         setUsuario({
             id: 0,
-        nome: "",
-        email: "",
-        senha: "",
-        foto: "",
-        tipo: "",
-        usuario: "",
-        token: ""
+            nome: "",
+            email: "",
+            senha: "",
+            foto: "",
+            tipo: "",
+            token: ""
            })
     }
 

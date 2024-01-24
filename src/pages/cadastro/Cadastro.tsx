@@ -20,7 +20,7 @@ function Cadastro() {
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
-    id: 0,
+            id: 0,
             nome: "",
             email: "",
             foto: "",
@@ -88,14 +88,26 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
-              id="usuario"
-              name="usuario"
-              placeholder="Usuario"
+              id="email"
+              name="email"
+              placeholder="Seu Email"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.email} 
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label htmlFor="tipo">Tipo</label>
+            <input
+              type="text"
+              id="tipo"
+              name="tipo"
+              placeholder="Tipo de Usuario"
+              className="border-2 border-slate-700 rounded p-2"
+              value={usuario.tipo} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
