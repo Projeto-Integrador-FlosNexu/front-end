@@ -5,10 +5,13 @@ import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login';
 import About from './pages/about/About';
+import UserProvider from './contexts/UserContext';
+import Cadastro from './pages/cadastro/Cadastro';
 
 function App() {
   return (
     <>
+    <UserProvider>
     <BrowserRouter>
         <Navbar />
           <div className='min-h-[80vh]'>
@@ -17,10 +20,12 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/cadastro" element={<Cadastro />} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
+        </UserProvider>
     </>
 );
 }
