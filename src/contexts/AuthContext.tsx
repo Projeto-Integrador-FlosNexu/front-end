@@ -1,12 +1,6 @@
 import { createContext, ReactNode, useState } from "react"
-
 import UsuarioLogin from "../models/UsuarioLogin"
-<<<<<<< HEAD
 import { login } from "../services/Service"
-=======
-//import { login } from "../services/Service"  -> IMPORTAR A SERVICE DEPOIS DO PUSH
->>>>>>> a8ca01b30b990070e0d70f338a735e5769a9d65c
-// import { toastAlerta } from "../utils/toastAlerta"
 
 interface AuthContextProps {
     usuario: UsuarioLogin
@@ -27,15 +21,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
         id: 0,
         nome: "",
         email: "",
-<<<<<<< HEAD
         senha: "",
         foto: "",
-=======
-        foto: "",
-        senha: "",
         tipo: "",
         usuario: "",
->>>>>>> a8ca01b30b990070e0d70f338a735e5769a9d65c
         token: ""
     })
 
@@ -58,19 +47,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
     function handleLogout() {
         setUsuario({
             id: 0,
-            nome: "",
-            email: "",
-<<<<<<< HEAD
-            senha: "",
-            foto: "",
-=======
-            foto: "",
-            senha: "",
-            tipo: "",
-            usuario: "",
->>>>>>> a8ca01b30b990070e0d70f338a735e5769a9d65c
-            token: ""
-        })
+        nome: "",
+        email: "",
+        senha: "",
+        foto: "",
+        tipo: "",
+        usuario: "",
+        token: ""
+           })
     }
 
     return (

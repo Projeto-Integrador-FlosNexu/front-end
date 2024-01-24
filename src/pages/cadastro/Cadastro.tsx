@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
-//import { cadastrarUsuario } from '../../services/Service'
+import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
 
 function Cadastro() {
@@ -95,7 +95,7 @@ function Cadastro() {
               name="usuario"
               placeholder="Usuario"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.usuario} 
+              value={usuario.email} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
