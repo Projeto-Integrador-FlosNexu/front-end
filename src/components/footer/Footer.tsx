@@ -1,4 +1,3 @@
-import React from 'react'
 import { GithubLogo } from '@phosphor-icons/react'
 
 function Footer() {
@@ -12,7 +11,7 @@ function Footer() {
             <p className='text-xl font-bold'>FlosNexu | Copyright: </p>
             <p className='text-lg'>Acesse nossas redes sociais</p>
             <div className='flex gap-2'>
-            <GithubLogo size={48} />
+            <a href="https://github.com/FlosNexu" target="_blank" ><GithubLogo size={48} /></a>
             </div>
           </div>
         </div>

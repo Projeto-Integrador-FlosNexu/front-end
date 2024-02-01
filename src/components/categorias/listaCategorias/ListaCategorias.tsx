@@ -1,15 +1,23 @@
-import {useEffect, useState } from 'react';
+import {useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import Categoria from '../../../models/Categoria';
 import { buscar } from '../../../services/Service';
 import CardCategorias from '../cardCategorias/CardCategorias';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
+  const { usuario } = useContext(AuthContext);
+  const token = usuario.token;
+
   async function buscarCategorias() {
     try {
-      await buscar('/categorias', setCategorias);
+      await buscar('/categorias', setCategorias, {
+        headers: {
+          Authorization: token,
+      },
+  });
 
     } catch (error: any) {
         alert(' Erro ao listar as categorias')
