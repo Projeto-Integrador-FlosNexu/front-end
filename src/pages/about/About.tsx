@@ -75,12 +75,12 @@ const About: React.FC = () => {
       <section>
         <h2>Motivação</h2>
         <p>
-         [O intuito principal do projeto busca
+          [O intuito principal do projeto busca
           garantir o acesso universal, confiável, sustentável, moderno e
           acessível à energia limpa. Esse tema vem ganhando cada vez mais
           publicidade nos últimos tempos, influenciando as nações a cooperarem
           de maneira efetiva e estreitando as fronteiras entre elas. Nesse
-          contexto, a promoção de fontes de energia limpa surge como uma
+          condescricao, a promoção de fontes de energia limpa surge como uma
           peça-chave na construção de um futuro energético mais equitativo e
           sustentável.].
         </p>
