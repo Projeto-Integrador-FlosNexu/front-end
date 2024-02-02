@@ -12,6 +12,7 @@ function Home() {
           <div className="flex flex-col gap-4 items-center justify-center py-4">
               <h2 className='text-5xl font-bold'>Seja bem-vinde:</h2>
               <Link to="/login" className='rounded bg-[#F5DABF] text-[#FF8100] py-2 px-4'>Voltar</Link>
+              <Link to="/cadastroProduto" className='rounded bg-[#F5DABF] text-[#FF8100] py-2 px-4'>Cadastrar Produto</Link>
             </div>
             <div className="flex justify-center ">
               <img src={homeLogo} alt="" className='w-2/3' />
