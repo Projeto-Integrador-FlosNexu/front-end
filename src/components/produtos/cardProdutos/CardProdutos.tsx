@@ -14,7 +14,7 @@ function CardProduto({ post }: CardProdutoProps) {
             <p>{post.nome}</p>
         </div>
         <div className='p-4 '>
-          <img src={post.foto} className='w-12' alt="" />
+          <img src={post.foto} className='w-120' alt="" />
           <p>Preço: {post.descricao} </p>
           <h4 className='text-lg font-semibold uppercase'>{post.nome}</h4>
           <p>{post.descricao}</p>
