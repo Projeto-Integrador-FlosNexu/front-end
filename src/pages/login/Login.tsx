@@ -2,10 +2,10 @@ import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
-
 import { AuthContext } from '../../contexts/AuthContext';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
+import { EnvelopeSimple } from '@phosphor-icons/react'
 
 function Login() {
   let navigate = useNavigate();
@@ -41,57 +41,61 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-1 h-screen place-items-center font-bold fundoLogin ">
-        <body className='body'>
+      <body>
+      <section>
+       <div className="form-box">
         <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="email">Usuário</label>
-            <input
+          <h2 className="text-white text-5xl ">Entrar</h2>
+          <div className='input-container'>
+              <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204191560397225994/image.png?ex=65d3d5c8&is=65c160c8&hm=df92915efe0e13a751e8e88f6670cbb081bd8baf0ba94fdf12ba4e2cfbee27e5&" alt="" />
+            <div className="inputbox">
+            <input 
               type="text"
               id="email"
               name="email"
-              placeholder="Digite seu email"
-              className="input"
+              placeholder='Usuário'
               value={usuarioLogin.email} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
+              />
+            </div>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
-            <input
-              type="password"
-              id="senha"
-              name="senha"
-              placeholder="Senha"
-              className="input"
-              value={usuarioLogin.senha} 
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            />
-          </div>
-          <button  type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+            <div className='input-container'>
+              <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204192810295890010/image.png?ex=65d3d6f2&is=65c161f2&hm=eb7142301d54707ccb8bca22cd67360cb1f65bc09ed536bde89833b275104237&" alt="" />
+              <div className="inputbox">
+                <input
+                type="password"
+               id="senha"
+                name="senha"
+                placeholder="Senha"
+                value={usuarioLogin.senha} 
+                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+              />
+             </div>
+            </div>
+
+            <button  type='submit' className="button bg-white">
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
             animationDuration="0.75"
             width="24"
             visible={true}
-          /> :
-            <span>Entrar</span>}
+            /> :
+             <span>Entrar</span>}
           </button>
 
-          <hr className="border-slate-800 w-full" />
+          <hr className="border-white w-full" />
 
-          <p>
+          <p className='text-white font-bold'>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+            <Link to="/cadastro" className=" text-black hover:underline">
               Cadastre-se
             </Link>
           </p>
         </form>
-        </body>
       </div>
+      </section>
+      </body>
     </>
   );
 }
