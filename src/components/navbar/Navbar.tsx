@@ -1,9 +1,30 @@
 import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext';
+import React, { useContext } from 'react';
 
 
 function Navbar() {
-  return (
-    <>
+  let navigate = useNavigate();
+
+  const { usuario, handleLogout } = useContext(AuthContext);
+
+  function logout() {
+    handleLogout();
+    alert('Usuário deslogado com sucesso');
+    navigate('/login');
+  }
+
+  let navbarComponent;
+
+  if (usuario.token !== '') {
+    navbarComponent = (
+      <div
+        className='w-full flex justify-center py-6'
+        style={{
+          background: 'linear-gradient(to bottom, red, black)',
+          color: 'white',
+        }}
+      >
      <div className='w-full bg-[#3CB371] text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
             <Link to='/home' className='text-2xl font-bold uppercase'>FlosNexu</Link>
@@ -18,8 +39,14 @@ function Navbar() {
             </div>
           </div>
         </div>
+        </div>
+         );
+    }
+    return (
+    <>
+      {navbarComponent}
     </>
-  )
+  );
 }
 
 export default Navbar;

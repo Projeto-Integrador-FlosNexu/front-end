@@ -41,19 +41,10 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-    
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold fundoLogin ">
-      <div className="hidden lg:block">
-          <h1 className='text-6xl text-slate-100/80'>
-            Mude o mundo, <br /> Comece por você!
-          </h1>
-          <p className='text-1x1 my-2 text-slate-100/80'>
-          Soluções energéticas para sua casa e sua empresa.
-          
-          </p>
-
-      </div>
-        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-1 h-screen place-items-center font-bold fundoLogin ">
+        <body className='body'>
+        <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
           <h2 className="text-slate-900 text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="email">Usuário</label>
@@ -62,7 +53,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               id="email"
               name="email"
               placeholder="Digite seu email"
-              className="border-2 border-slate-700 rounded p-2"
+              className="input"
               value={usuarioLogin.email} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -74,7 +65,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="input"
               value={usuarioLogin.senha} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -99,6 +90,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             </Link>
           </p>
         </form>
+        </body>
       </div>
     </>
   );

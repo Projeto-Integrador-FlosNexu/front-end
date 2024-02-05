@@ -1,41 +1,52 @@
 .fundoLogin {
-    background-image: url(../../assets/login.png);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .bg-login {
-    background-color: #228B22;
-    
-  }
-  .line-h {
-    width: 100%;
-    border: 1px solid #000;
+  background-image: url(../../assets/login.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
- .hr-login {
-    
-    position: relative;
-    z-index: 100;
-    margin-top: -10px;
-    margin-bottom: 0px;    
- }
+.body{
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
 
- .descricao-login {
-    border-radius: 25px;
-    font-size: 14px;
-    position: relative;
-    z-index: 200;
-    left: 29%;
-    z-index: 200;
-    background-color: white;
-    max-width: 135px;
-    color: rgb(69, 72, 75);
-  }
+.bg-login {
+  background-color: #228B22;
+}
 
-  .border-f {
-    border-color: #228B22 !important;
-  }
+.line-h {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.hr-login {
+  position: relative;
+  z-index: 100;
+  margin-top: -10px;
+  margin-bottom: 0px;    
+}
+
+.descricao-login {
+  border-radius: 25px;
+  font-size: 14px;
+  position: relative;
+  z-index: 200;
+  left: 29%;
+  z-index: 200;
+  background-color: white;
+  max-width: 135px;
+  color: rgb(69, 72, 75);
+}
+
+.border-f {
+  border-color: #228B22 !important;
+}
