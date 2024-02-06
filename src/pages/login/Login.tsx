@@ -1,4 +1,4 @@
-import  { ChangeEvent, useContext, useEffect, useState } from 'react';
+import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -41,10 +41,10 @@ function Login() {
 
   return (
     <>
-
+      <body>
         <section>
           <div className="form-boxLogin">
-            <form className="flex remove-borda justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
+            <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
               <h2 className="text-white text-5xl ">Entrar</h2>
               <div className='input-containerLogin'>
                 <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204191560397225994/image.png?ex=65d3d5c8&is=65c160c8&hm=df92915efe0e13a751e8e88f6670cbb081bd8baf0ba94fdf12ba4e2cfbee27e5&" alt="simbolo de uma carta" />
@@ -96,7 +96,7 @@ function Login() {
             </form>
           </div>
         </section>
-   
+      </body>
     </>
   );
 }
