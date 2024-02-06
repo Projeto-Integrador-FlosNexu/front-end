@@ -2,6 +2,7 @@ import './CarouselStyle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import Slide02 from './Slide02';
 
 
 
@@ -14,7 +15,7 @@ function Carousel() {
                 effect=""
                 loop={true}
                 autoplay={{
-                    delay: 3500,
+                    delay: 5500,
                     disableOnInteraction: true,
                 }}
                 pagination={{ clickable: true, }}
@@ -23,6 +24,10 @@ function Carousel() {
                 className='mySwiper'
             >
                 {/* {carouselData.map((item) => ( */}
+                <SwiperSlide>
+                    <Slide02 />
+                </SwiperSlide>
+                    
                     <SwiperSlide>
                         
                     <Link to='/produtos' className='hover:underline'>
