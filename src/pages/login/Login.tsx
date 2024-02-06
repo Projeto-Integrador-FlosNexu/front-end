@@ -1,4 +1,4 @@
-import  { ChangeEvent, useContext, useEffect, useState } from 'react';
+import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -41,7 +41,7 @@ function Login() {
 
   return (
     <>
-
+      <body>
         <section>
           <div className="form-boxLogin">
             <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
@@ -96,7 +96,7 @@ function Login() {
             </form>
           </div>
         </section>
-   
+      </body>
     </>
   );
 }
