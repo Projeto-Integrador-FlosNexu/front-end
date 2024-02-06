@@ -1,101 +1,89 @@
 section {
   font-family: 'Merienda', cursive;
-
-
   background-image: url(../../assets/login.png);
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
-  display:flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   width: 100%;
 
 }
-.form-box{
-position: relative;
-width: 400px;
-height: 450px;
-background: transparent;
-border: 2px solid rgb(249, 249, 249);
-border-radius: 20px ;
-backdrop-filter: blur(10px);
-display: flex;
-justify-content: center;
-align-items: center;
+
+.form-boxLogin {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgb(249, 249, 249);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button{
-width:100%;
-height: 40px;
-border-radius: 40px;
-border: 2px solid #9f9e9e;
-outline: none;
-cursor: pointer;
-font-size: 1em;
-font-weight: 600;
+.buttonLogin {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  border: 2px solid #9f9e9e;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
 }
 
-.inputbox {
+.inputboxLogin {
   position: relative;
   margin: 30px 0;
   width: 310px;
   border-bottom: 2px solid #fff;
 }
 
-input{
-  -webkit-text-fill-color: white;
+.placeholderLogin::placeholder {
+  color: white;
+  /* Substitua isso pela cor desejada */
 }
 
-.inputbox label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 1em;
-  pointer-events: none;
-  transition: .5s;
-}
-  input:focus ~ label,
-  input:valid ~ label{
-  top: -5px;
-}
-
-.inputbox input {
+.inputboxLogin input {
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 1em;
-  padding:0 10px 5px;
+  padding: 0 10px 5px;
   color: #fff;
 }
 
-.input-container {
-  padding:0 10px 5px;
+.input-containerLogin {
+  padding: 0 10px 5px;
   position: relative;
   display: inline-block;
 }
 
-.input-container img {
+.input-containerLogin img {
   position: absolute;
-  right: 10px; /* Ajuste conforme necessário para posicionar a imagem corretamente */
-  top: 50%; /* Ajuste conforme necessário para posicionar a imagem corretamente */
+  right: 10px;
+  /* Ajuste conforme necessário para posicionar a imagem corretamente */
+  top: 50%;
+  /* Ajuste conforme necessário para posicionar a imagem corretamente */
   transform: translateY(-50%);
-  width: 20px; /* Ajuste o tamanho da imagem conforme necessário */
+  width: 20px;
+  /* Ajuste o tamanho da imagem conforme necessário */
   height: auto;
 }
 
-  .forget{
-  margin: -15px 15px ;
+.forget {
+  margin: -15px 15px;
   font-size: .9em;
   color: #fff;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .bg-login {
@@ -111,7 +99,7 @@ input{
   position: relative;
   z-index: 100;
   margin-top: -10px;
-  margin-bottom: 0px;    
+  margin-bottom: 0px;
 }
 
 .descricao-login {
