@@ -1,36 +1,24 @@
-import "./Home.css";
-import homeLogo from "../../assets/react.svg";
-import { Link } from "react-router-dom";
-import Carousel from "../../components/swiperCorousel/CarouselContainer";
+import React from 'react';
+import './Home.css';
+
+import Carousel from '../../components/swiperCorousel/CarouselContainer';
+// import ListaCategorias from '../../components/categorias/listaCategorias/ListaCategorias';
+import ListaProdutos from '../../components/produtos/listaProdutos/ListaProdutos';
+
 
 function Home() {
-  return (
-    <>
-      {Carousel()}
-      <div className="bg-[#228B22] flex justify-center">
-        <div className="container grid grid-cols-2 text-white">
-          <div className="flex flex-col gap-4 items-center justify-center py-4">
-            <h2 className="text-5xl font-bold">Seja bem-vinde:</h2>
-            <Link
-              to="/login"
-              className="rounded bg-[#F5DABF] text-[#FF8100] py-2 px-4"
-            >
-              Voltar
-            </Link>
-            <Link
-              to="/cadastroProduto"
-              className="rounded bg-[#F5DABF] text-[#FF8100] py-2 px-4"
-            >
-              Cadastrar Produto
-            </Link>
-          </div>
-          <div className="flex justify-center ">
-            <img src={homeLogo} alt="" className="w-2/3" />
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    return (
+        <>
+          {Carousel()}
+        
+        {/* Lembrar de adicionar a função lista produtos   */}
+
+       
+        <ListaProdutos/>
+        
+      </>
+      
+    );
 }
 
 export default Home;
