@@ -33,9 +33,7 @@ function Login() {
   function login(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
     handleLogin(usuarioLogin)
-
   }
-
 
   return (
     <>
@@ -86,7 +84,7 @@ function Login() {
 
             <p className='text-white font-bold'>
               Ainda não tem uma conta?{' '}
-              <Link to="/cadastro" className=" text-green-400 hover:underline">
+              <Link to="/cadastroUsuario" className=" text-green-400 hover:underline">
                 Cadastre-se
               </Link>
             </p>

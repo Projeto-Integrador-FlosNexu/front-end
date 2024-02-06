@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { buscar, atualizar, cadastrar } from "../../../services/Service";
 import { AuthContext } from "../../../contexts/AuthContext";
+import './CadastroCateg.css'
 
 function FormularioCategoria() {
 
@@ -11,12 +12,13 @@ function FormularioCategoria() {
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-
     let navigate = useNavigate();
     const { usuario } = useContext(AuthContext);
     const { id } = useParams<{ id: string }>();
 
     const token = usuario.token;
+
+    console.log(token)
 
     async function buscarPorId(id: string) {
         await buscar(`/categorias/${id}`, setCategoria, {
@@ -26,9 +28,7 @@ function FormularioCategoria() {
         });
 
     }
-    {
 
-    }
     useEffect(() => {
         if (id !== undefined) {
             buscarPorId(id)
@@ -43,10 +43,6 @@ function FormularioCategoria() {
 
         console.log(JSON.stringify(categoria))
     }
-
-    
-
-
 
     async function gerarNovoCategoria(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -97,65 +93,56 @@ function FormularioCategoria() {
     }
 
     return (
-        <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
-                {id === undefined ? 'Cadastre um novo Categoria' : 'Editar Categoria'}
-            </h1>
+        <>
+            <div className="fundoCadastroCateg">
+                <div className="conteudoCateg">
+                    <div className="container flex flex-col mx-auto items-center">
+                        <div className="form-boxCadastroCateg">
+                            <form onSubmit={gerarNovoCategoria}>
+                                <h2 className='text-black text-4xl mb-3 ml-3 mt-1'>Categoria</h2>
+                                <div className="input-containerCadastroCateg">
+                                    <div className="inputboxCadastroCateg">
+                                        <input
+                                            type="text"
+                                            placeholder="Nome"
+                                            name='nome'
+                                            className="placeholderCadastroCateg border-2 border-slate-700 rounded-3xl p-2"
+                                            value={categoria.nome}
+                                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="input-containerCadastroCateg">
+                                    <div className="inputboxCadastroCateg">
+                                        <input
+                                            type="text"
+                                            placeholder="Descrição"
+                                            name='descricao'
+                                            className="placeholderCadastroCateg border-2 border-slate-700 rounded-3xl p-2"
+                                            value={categoria.descricao}
+                                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                                        />
+                                    </div>
+                                </div>
+                                <button
+                                    className="rounded-3xl disabled:bg-slate-200 bg-white hover:bg-indigo-800 text-black font-bold w-1/2 mx-auto  py-2 flex justify-center"
+                                    type="submit"
+                                >
 
-            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoCategoria}>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Nome Categoria:</label>
-                    <input
-                        type="text"
-                        placeholder="Nome"
-                        name='nome'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={categoria.nome}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                                    {isLoading ? <RotatingLines
+                                        strokeColor="black"
+                                        strokeWidth="5"
+                                        animationDuration="0.75"
+                                        width="24"
+                                        visible={true} /> : <span> {id === undefined ? 'Cadastrar' : 'Atualizar'}</span>}
 
-                    />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="icone">Icone categoria:</label>
-                    <input
-                        type="text"
-                        placeholder="Adiciona um url do icon"
-                        name='icone'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={categoria.icone}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-
-                    />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição Categoria:</label>
-                    <input
-                        type="text"
-                        placeholder="Descrição"
-                        name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={categoria.descricao}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-
-                    />
-                </div>
-                <button
-                    className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
-                    type="submit"
-                >
-
-                    {isLoading ? <RotatingLines
-                        strokeColor="white"
-                        strokeWidth="5"
-                        animationDuration="0.75"
-                        width="24"
-                        visible={true} /> : <span> {id === undefined ? 'Cadastrar' : 'Atualizar'}</span>}
-
-                </button>
-            </form>
-        </div>
+            </div>
+        </>
     );
 }
 
