@@ -1,6 +1,6 @@
 .fundoCadastro {
   font-family: 'Merienda', cursive;
-  background-image: url(../../assets/retro.jpg);
+  background-image: url(../../assets/login.png);
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
@@ -15,6 +15,7 @@
 
 .conteudo {
   width: 70%;
+  height: fit-content;
   padding: 90px;
   margin: auto;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.393),

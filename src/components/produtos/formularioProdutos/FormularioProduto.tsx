@@ -5,6 +5,8 @@ import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
 import { RotatingLines } from 'react-loader-spinner';
+import './CadastroProdutos.css'
+
 
 function FormularioProduto() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -142,107 +144,127 @@ function FormularioProduto() {
   const carregandoCategoria = categoria.descricao === '';
 
   return (
-    <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
+    <>
+        <div className='fundoCadastroProd'>
+          <div className='conteudoCP'>
+            <div className="container flex flex-col mx-auto items-center">
+              <div className='form-boxCadastroProd'>
+                <form onSubmit={gerarNovoProduto}>
+                  <h2 className='text-white text-4xl mb-3 ml-3 mt-1'>Produto</h2>
+                  <div className='input-containerCadastroProd'>
 
-      <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Nome do produto</label>
-          <input
-            value={produto.nome}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Qual o Nome do Produto"
-            name="nome"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Descrição do produto</label>
-          <input
-            value={produto.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Fale um pouco sobre o Produto"
-            name="descricao"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="number">Preço do produto</label>
-          <input
-            value={produto.preco}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="number"
-            placeholder="Qual o preço"
-            name="preco"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Foto do produto</label>
-          <input
-            value={produto.foto}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Coloque a URL da foto do produto"
-            name="foto"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Marca do produto</label>
-          <input
-            value={produto.marca}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Qual a marca do produto"
-            name="marca"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="number">Quantidade em estoque</label>
-          <input
-            value={produto.quantidade}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="number"
-            placeholder="Qual a quantidade em estoque"
-            name="quantidade"
-            required
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <p>Categoria do produto</p>
-          <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
-            <option value="" selected disabled>Selecione uma categoria</option>
-            {categorias.map((categoria) => (
-              <>
-                <option value={categoria.id} >{categoria.descricao}</option>
-              </>
-            ))}
-          </select>
-        </div>
-        <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
-          {carregandoCategoria || isLoading ?
+                    <div className='inputboxCadastroProd'>
+                      <input
+                        value={produto.nome}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Nome"
+                        name="nome"
+                        required
+                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
 
-            <RotatingLines
-              strokeColor="white"
-              strokeWidth="5"
-              animationDuration="0.75"
-              width="24"
-              visible={true}
-            />
-            : id !== undefined ? 'Editar' : 'Cadastrar'}
-        </button>
-      </form>
-    </div>
+                    <div className='inputboxCadastroProd'>
+
+                      <input
+                        value={produto.descricao}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Descrição"
+                        name="descricao"
+                        required
+                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
+
+                    <div className='inputboxCadastroProd'>
+                      <input
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Preço"
+                        name="preco"
+                        required
+                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
+                    <div className='inputboxCadastroProd'>
+                      <input
+                        value={produto.foto}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Foto do produto"
+                        name="foto"
+                        required
+                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
+                    <div className='inputboxCadastroProd'>
+
+                      <input
+                        value={produto.marca}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Marca"
+                        name="marca"
+                        required
+                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
+
+                    <div className='inputboxCadastroProd'>
+                      <input
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Quantidade em estoque"
+                        name="quantidade"
+                        required
+                        className="placeholderCadastroProd rounded-3xl border-2 border-slate-700 p-2"
+                      />
+                    </div>
+                  </div>
+                  <div className='input-containerCadastroProd'>
+
+                    <select name="categoria" id="categoria"
+                      className='inputboxCadastroProd placeholderCadastroProd rounded-3xl border-2 border-slate-700 p-2' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
+                      <option className='text-black ' text-black value="" selected disabled>Selecione uma categoria</option>
+                      {categorias.map((categoria) => (
+                        <>
+                          <option value={categoria.id} >{categoria.descricao}</option>
+                        </>
+                      ))}
+                    </select>
+
+
+                  </div>
+                  <button disabled={carregandoCategoria} type='submit' className='buttonCadastroProd rounded-3xl disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-black font-bold w-1/2 mx-auto  py-2 flex justify-center'>
+                    {isLoading ?
+
+                      <RotatingLines
+                        strokeColor="black"
+                        strokeWidth="5"
+                        animationDuration="1"
+                        width="24"
+                        visible={true}
+                      />
+                      : id !== undefined ? 'Editar' : 'Cadastrar'}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </>
   );
 }
 

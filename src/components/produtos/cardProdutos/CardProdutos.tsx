@@ -17,11 +17,10 @@ function CardProduto({ post }: CardProdutoProps) {
         <div className='pb-4 pt-3 px-4 '>
           <p className='text-gray-400 font-light text-xs text-center'>{post.marca}</p> {/* <---- Marca: */}
           <p className='text-gray-800 text-center mt-1'>{post.nome}</p>
-          <p className='text-center text-gray-800 mt-1'>Preço: <br />
-            <span className='text-green-600 font-bold'> R$ {post.preco} </span> </p>
-          {/* <p>{post.descricao}</p> */}
+            <span className='text-green-600 font-bold flex justify-center'> R$ {post.preco} </span> 
+         
         </div>
-        {/* Trecho abaixo contem botões para adiconar ou remover quantidadee de itens: */}
+         {/* Trecho abaixo contem botões para adiconar ou remover quantidadee de itens: 
         <div className="flex justify-center my-1 ">
           <button
             className="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
@@ -65,8 +64,7 @@ function CardProduto({ post }: CardProdutoProps) {
             </svg>
           </button>
         </div>
-          {/* fim botão */}
-
+         fim botão */}
           {/* Inicio botão adicionar carrinho de  */}
 
           <button className='py-2 px-4 bg-green-800 text-white rounded

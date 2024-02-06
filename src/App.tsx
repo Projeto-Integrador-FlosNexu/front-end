@@ -1,5 +1,5 @@
 import Home from './pages/home/Home';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar/Navbarteste';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login';
@@ -34,6 +34,7 @@ function App() {
               <Route path="/cadastroProduto" element={<FormularioProduto />} />
               <Route path="/editarProduto/:id" element={<FormularioProduto />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              
             </Routes>
           </div>
           <Footer />
