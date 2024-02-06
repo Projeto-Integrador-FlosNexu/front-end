@@ -3,8 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
+import logo from '../../assets/logoFN.png'
+
 
 function Cadastro() {
+
 
   let navigate = useNavigate()
 
@@ -72,6 +75,14 @@ function Cadastro() {
   return (
     <>
       <div className="fundoCadastro ">
+        <div className='posicaoLogo text-center'>
+          <img src={logo} alt="Logo FlosNexu" />
+          <div className='ml-5'>
+        <p className='slogan'>
+          <span></span>
+        </p>
+        </div>
+        </div>
         <div className='conteudo'>
           <div className='form-boxCadastro'>
             <form onSubmit={cadastrarNovoUsuario}>
