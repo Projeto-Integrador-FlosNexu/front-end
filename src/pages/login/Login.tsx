@@ -41,7 +41,6 @@ function Login() {
 
   return (
     <>
-      <body>
         <section>
           <div className="form-boxLogin">
             <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
@@ -96,7 +95,6 @@ function Login() {
             </form>
           </div>
         </section>
-      </body>
     </>
   );
 }

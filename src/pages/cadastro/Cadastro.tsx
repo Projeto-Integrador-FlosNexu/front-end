@@ -72,7 +72,6 @@ function Cadastro() {
 
   return (
     <>
-      <body>
         <div className="fundoCadastro ">
           <div className='conteudo'>
             <div className='form-boxCadastro'>
@@ -174,7 +173,6 @@ function Cadastro() {
             </div>
           </div>
         </div>
-      </body>
     </>
   )
 }
