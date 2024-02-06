@@ -11,6 +11,7 @@ function FormularioCategoria() {
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
+
     let navigate = useNavigate();
     const { usuario } = useContext(AuthContext);
     const { id } = useParams<{ id: string }>();
@@ -42,6 +43,10 @@ function FormularioCategoria() {
 
         console.log(JSON.stringify(categoria))
     }
+
+    
+
+
 
     async function gerarNovoCategoria(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -110,6 +115,20 @@ function FormularioCategoria() {
 
                     />
                 </div>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="icone">Icone categoria:</label>
+                    <input
+                        type="text"
+                        placeholder="Adiciona um url do icon"
+                        name='icone'
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={categoria.icone}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+
+                    />
+                </div>
+
                 <div className="flex flex-col gap-2">
                     <label htmlFor="descricao">Descrição Categoria:</label>
                     <input
