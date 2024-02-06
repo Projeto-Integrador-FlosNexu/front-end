@@ -13,6 +13,7 @@ import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProdutos/DeletarProduto";
 import Footer from "./components/footer/Footer";
+import Perfil from "./pages/perfil/Perfil";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="/cadastroProduto" element={<FormularioProduto />} />
               <Route path="/editarProduto/:id" element={<FormularioProduto />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
           <Footer />
