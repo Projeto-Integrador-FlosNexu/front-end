@@ -4,7 +4,7 @@ import FlosNexu from "../../assets/Logo_FlosNexu.png";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import "./SideBar.css";
+import "./Sidebar.css";
 import { toastAlerta } from "../../util/toastAlerta";
 
 function Sidebar() {
