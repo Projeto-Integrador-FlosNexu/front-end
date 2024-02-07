@@ -36,7 +36,7 @@ function Navbar() {
               <Link to='/home' className='text-2xl font-bold uppercase'>FlosNexu</Link>
 
               <div className='flex gap-4'>
-                <Link to='/about' className='hover:underline'>About</Link>
+                <Link to='/about' className='hover:underline'>Sobre</Link>
                 <Link to='/produtos' className='hover:underline'>Produtos</Link>
                 <Link to='/categorias' className='hover:underline'>Categorias</Link>
                 <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categorias</Link>
@@ -61,7 +61,7 @@ function Navbar() {
               <Link to='/home' className='text-2xl font-bold uppercase'>FlosNexu</Link>
 
               <div className='flex gap-4'>
-                <Link to='/about' className='hover:underline'>About</Link>
+                <Link to='/about' className='hover:underline'>Sobre</Link>
                 <Link to='/produtos' className='hover:underline'>Produtos</Link>
                 <Link to='/categorias' className='hover:underline'>Categorias</Link>
                 <Link to='/perfil' className='hover:underline'>Perfil</Link>

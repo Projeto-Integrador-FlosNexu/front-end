@@ -10,6 +10,12 @@ section {
     animation: colors 15s ease infinite;
   }
 
+  .background {
+    background: linear-gradient(45deg, #084177, #687466, #cd8d7b, #fbc490);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+  }
+
   @keyframes colors {
     0% {
       background-position: 0% 50%;

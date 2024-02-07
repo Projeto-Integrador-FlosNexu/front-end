@@ -1,0 +1,29 @@
+.fundo-about {
+    background-image: url(https://cdn.discordapp.com/attachments/1204581001138020394/1204592226793955369/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama.jpg?ex=65d54aef&is=65c2d5ef&hm=b3984e427055d19707ded46beac4a9483018f47d7499c4228083b45efa355273&);
+    background-repeat: no-repeat;
+    max-height: 100%;
+    min-height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-header {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.fonte-h2{
+    font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+}
+
+.p-about {
+    font-style: italic;
+    margin: 15px auto 15px auto;
+    font-size: 18px;
+    font-weight: 500;
+   }
