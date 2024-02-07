@@ -37,7 +37,7 @@ function Login() {
 
   return (
     <>
-      <section>
+      <section className='section'>
         <div className="form-boxLogin">
           <form className="flex justify-between items-center flex-col w-4/2 gap-4" onSubmit={login}>
             <h2 className="text-white text-5xl">Entrar</h2>
