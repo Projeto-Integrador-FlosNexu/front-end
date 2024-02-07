@@ -1,8 +1,8 @@
 import './Home.css';
-import turbina from '../../assets/FlosNexu2.png';
+import turbina from '../../assets/FlosNexuVerde.png';
 import painel from '../../assets/painel.png';
-import servico from '../../assets/servico.png';
-import arvore from '../../assets/arvore.png';
+import categorias from '../../assets/categorias.png';
+import promocao from '../../assets/promocao.png';
 import Carousel from '../../components/swiperCorousel/CarouselContainer';
 import { Link } from 'react-router-dom';
 
@@ -15,11 +15,11 @@ function Home() {
       <div className='container mx-auto'> 
          {/* CARD PARA DIRECIONAR PRA PAGINA DE LOGIN */}
         <div className='cardLogin '> 
-          <h2 className=' mt-16 mb-8 font-bold '>Entre na sua conta</h2>
+          <h2 className=' mt-20 mb-2 font-bold '>Entre na sua conta</h2>
           <div>
-            <img className='imagem-conta ' src={turbina} alt="Imagem Conta" />
+            <img className='imagem-conta mt-3 mb-2 ' src={turbina} alt="Imagem Conta" />
           </div>
-          <div className='flex justify-center text-center p-4 mt-9'>
+          <div className='flex justify-center text-center p-4 mt-3'>
             <p>Aproveite ofertas para comprar tudo que quiser</p>
           </div>
           <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-20 mt-4 py-1.5 '>
@@ -48,29 +48,29 @@ function Home() {
 
  {/* CARD PARA DIRECIONAR PRA PAGINA DE CATEGORIAS */}
         <div className='cardLogin '>
-          <h2 className='mt-10 mb-10 pb-20 font-bold'>Nossas categorias</h2>
+          <h2 className=' mt-9 mb-1 pb-20 font-bold '>Nossas categorias</h2>
           <div>
-            <img className='imagem-conta' src={servico} alt="Imagem Conta" />
+            <img className='imagem-conta mt-0' src={categorias} alt="Imagem Conta" />
           </div>
           <div className='flex justify-center text-center p-4'>
             <p>Encontre placas solares, baterias solares, serviços de instalação e muito mais</p>
           </div>
-          <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-10 py-1.5'>
-            <Link to="/login" className="text-black font-bold rounded-md p-2">Ir para categorias</Link>
+          <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-16 py-1.5'>
+            <Link to="/categorias" className="text-black font-bold rounded-md p-2">Ir para categorias</Link>
           </button>
         </div>
 
  {/* CARD PARA DIRECIONAR DE OFERTAS DO DIA */}
         <div className='cardLogin '>
-          <h2 className='mt-10 mb-10 font-bold pb-2'>Entre na sua conta</h2>
+          <h2 className='mt-16 mb-10 font-bold pb-2'>Promoções</h2>
           <div>
-            <img className='imagem-conta' src={arvore} alt="Imagem Conta" />
+            <img className='imagem-conta' src={promocao} alt="Imagem Conta" />
           </div>
           <div className='flex justify-center text-center p-4'>
-            <p>Aproveite ofertas para comprar tudo que quiser</p>
+            <p>Confira os produtos em promoção</p>
           </div>
-          <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-10 py-1.5'>
-            <Link to="/login" className="text-black hover:underline rounded-md p-2">Entrar na sua conta</Link>
+          <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-20 mt-20 py-1.5'>
+            <Link to="" className="text-black font-bold rounded-md p-2">Ir para ofertas do dia</Link>
           </button>
         </div>
 
