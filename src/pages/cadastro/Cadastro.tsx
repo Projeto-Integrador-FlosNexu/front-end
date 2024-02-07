@@ -75,10 +75,10 @@ function Cadastro() {
   return (
     <>
       <div className="fundoCadastro ">
-        <div className='posicaoLogo text-center'>
+        <div className='posicaoLogo ml-12 mr-20 text-center'>
           <img src={logo} alt="Logo FlosNexu" />
           <div className='ml-5'>
-        <p className='slogan'>
+        <p className='slogan text-center ml-12 mr-20 w-3/5'>
           <span></span>
         </p>
         </div>
@@ -172,10 +172,8 @@ function Cadastro() {
                 </div>
               </div>
               <div className="flex justify-around w-full gap-8">
-                <button className='buttonCadastro rounded-3xl text-black bg-white w-4/1 py-1.5 flex justify-center' onClick={back}>
-                  Cancelar
-                </button>
-                <button className='buttonCadastro rounded-3xl text-black bg-white w-4/1 py-1.5 flex justify-center' type='submit'>
+                
+                <button className='buttonCadastro rounded-3xl text-white font-bold  py-1.5 flex justify-center' type='submit'>
                   Cadastrar
                 </button>
               </div>

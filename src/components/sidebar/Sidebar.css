@@ -1,0 +1,10 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000; /* Define a barra lateral para estar acima de outros elementos */
+    transition: width 0.3s ease; /* Adiciona uma transição suave ao alterar a largura */
+    width: 200px;
+    
+  }

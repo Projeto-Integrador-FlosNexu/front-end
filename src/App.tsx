@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-
-import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import About from "./pages/about/About";
@@ -14,16 +12,17 @@ import FormularioProduto from "./components/produtos/formularioProdutos/Formular
 import DeletarProduto from "./components/produtos/deletarProdutos/DeletarProduto";
 import Footer from "./components/footer/Footer";
 import Perfil from "./pages/perfil/Perfil";
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
-          <Navbar />
+          <Sidebar />
           <div className='min-h-[80vh]'>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
