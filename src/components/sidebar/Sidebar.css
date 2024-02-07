@@ -4,7 +4,10 @@
     left: 0;
     height: 100%;
     z-index: 1000; /* Define a barra lateral para estar acima de outros elementos */
-    transition: width 0.3s ease; /* Adiciona uma transição suave ao alterar a largura */
-    width: 200px;
-    
+    transition: width 0.5s ease; /* Adiciona uma transição suave ao alterar a largura */
+    width: 220px;
+    backdrop-filter: blur(20px);
+
   }
+ 
+  

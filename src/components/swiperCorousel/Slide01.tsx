@@ -1,11 +1,11 @@
 import React from 'react'
-import login from '../../assets/login.png'
+import login from '../../assets/retro.png'
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Slide01() {
   return (
     <div>
-      <div className="">
+      <div className="gradiente-container">
       <img src={login} alt="" className='w-full h-full' />
           <div className='container grid grid-cols-2 text-white'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
