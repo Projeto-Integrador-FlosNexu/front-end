@@ -134,7 +134,7 @@ const About: React.FC = () => {
 
 
       <div className="pb-10">
-        <h2 className="text-center text-5xl font-bold mt-5 text-white">Integrantes do Projeto</h2>
+        <h2 className="text-center text-5xl font-bold mt-5 text-white mb-8">Integrantes do Projeto</h2>
         <div className="flex flex-wrap gap-8 items-center justify-center mt-5">
           {members.map((member) => (
             <UserCard {...member} key={member.name}/>
