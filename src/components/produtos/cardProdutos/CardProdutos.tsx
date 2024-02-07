@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto'
 import { ShoppingCart } from '@phosphor-icons/react'
 
@@ -8,16 +7,16 @@ interface CardProdutoProps {
 
 function CardProduto({ post }: CardProdutoProps) {
   return (
-    <div className='w-80 bg-white shadow rounded border'>
+    <div className='w-80 mx-[20%] my-3 bg-white bg-opacity-10 backdrop-blur-2xl shadow-md rounded-2xl border justify-center'>
       <div>
-        <div className="h-48 w-full bg-white flex flex-col justify-between p-1 bg-cover bg-center border-b-2">
-          <img src={post.foto} className=' h-48 w-full' alt="" />
+        <div className="h-48 w-full bg-transparent border-solid  flex flex-col justify-between p-1 bg-center ">
+          <img src={post.foto} className=' block m-auto h-48 w-60 border-2' alt="" />
         </div>
 
-        <div className='pb-4 pt-3 px-4 '>
-          <p className='text-gray-400 font-light text-xs text-center'>{post.marca}</p> {/* <---- Marca: */}
+        <div className='pb-4 pt-3 px-4 h-32'>
+          <p className='text-gray-600 font-light text-xs text-center'>{post.marca}</p> {/* <---- Marca: */}
           <p className='text-gray-800 text-center mt-1'>{post.nome}</p>
-            <span className='text-green-600 font-bold flex justify-center'> R$ {post.preco} </span> 
+            <span className='text-green-600 font-bold flex justify-center '> R$ {post.preco} </span> 
          
         </div>
          {/* Trecho abaixo contem botões para adiconar ou remover quantidadee de itens: 
@@ -66,14 +65,13 @@ function CardProduto({ post }: CardProdutoProps) {
         </div>
          fim botão */}
           {/* Inicio botão adicionar carrinho de  */}
-
-          <button className='py-2 px-4 bg-green-800 text-white rounded
-           hover:bg-green-600 active:bg-green-700 disabled:opacity-50 mt-4 w-full 
-           flex items-center justify-center text-center'>
+          <div className='mx-4'>
+          <button className='border-2 py-2 px-4 bg-green-800 text-white rounded-3xl hover:bg-green-600 active:bg-green-700 disabled:opacity-50 my-5 w-full flex items-center justify-center text-center'>
             <span className=''>Adicionar ao carrinho</span>
             <ShoppingCart size={26} className='ml-1'/>
         
             </button>
+            </div>
         {/* Fim botão carrinho de compras */}
       </div>
       
