@@ -15,15 +15,15 @@ function Home() {
       <div className='container mx-auto'> 
          {/* CARD PARA DIRECIONAR PRA PAGINA DE LOGIN */}
         <div className='cardLogin '> 
-          <h2 className=' mt-16 mb-8 font-bold'>Entre na sua conta</h2>
+          <h2 className=' mt-16 mb-8 font-bold '>Entre na sua conta</h2>
           <div>
-            <img className='imagem-conta' src={turbina} alt="Imagem Conta" />
+            <img className='imagem-conta ' src={turbina} alt="Imagem Conta" />
           </div>
-          <div className='flex justify-center text-center p-4'>
+          <div className='flex justify-center text-center p-4 mt-9'>
             <p>Aproveite ofertas para comprar tudo que quiser</p>
           </div>
           <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-20 mt-4 py-1.5 '>
-            <Link to="/login" className="text-black hover:underline rounded-md p-2">Entrar na sua conta</Link>
+            <Link to="/login" className="text-black font-bold rounded-md p-2">Entrar na sua conta</Link>
           </button>
         </div>
 
@@ -56,7 +56,7 @@ function Home() {
             <p>Encontre placas solares, baterias solares, serviços de instalação e muito mais</p>
           </div>
           <button className='buttonCadastro rounded-3xl text-black bg-white w-60 mb-10 py-1.5'>
-            <Link to="/login" className="text-black hover:underline rounded-md p-2">Entrar na sua conta</Link>
+            <Link to="/login" className="text-black font-bold rounded-md p-2">Ir para categorias</Link>
           </button>
         </div>
 

@@ -40,7 +40,7 @@ function ListaCategorias() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className="flex justify-center w-full my-12">
+      <div className="mx-[30%] my-[5%] relative w-[800px] h-[500px] flex justify-center bg-transparent border-solid border-2 border-white border-r-[20px] flex-col items-center text-black">
         <div className="container flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categorias.map((categoria) => (

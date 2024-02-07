@@ -11,7 +11,7 @@ import Slide01 from './Slide01';
 
 function Carousel() {
     return (
-        <div className='container-slider shadow-lg '>
+        <div className=' container-slider shadow-lg'>
             
             <Swiper
                 slidesPerView={1}
