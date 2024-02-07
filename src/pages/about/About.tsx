@@ -65,14 +65,10 @@ const members: UserInfo[] = [
 
 const About: React.FC = () => {
   return (
-    <div >
-      <div className="w-full fundo-about" >
-        <h1 className="text-left text-4xl font-bold">Sobre o Projeto</h1>
-      </div>
-      
-      <div className="mt-28 section-header">
-          <h2 className="fonte-h2">Sobre nós</h2>
-          <p className="p-about">Conduzimos as mudanças para um futuro mais verde e resiliente, onde o hábito de cuidar do Planeta se estenda para todos. <br /> Na FlosNexu, estamos transformando a cultura global, promovendo a vitalidade da energia sustentável.</p>
+    <div className="fundo">
+      <div className=" section-header">
+          <h2 className="fonte-h2 text-white text-5xl">Sobre nós</h2>
+          <p className="p-about text-white">Conduzimos as mudanças para um futuro mais verde e resiliente, onde o hábito de cuidar do Planeta se estenda para todos. <br /> Na FlosNexu, estamos transformando a cultura global, promovendo a vitalidade da energia sustentável.</p>
       </div>
 
       <div className="flex items-center justify-center">
@@ -83,8 +79,8 @@ const About: React.FC = () => {
 
   <div className="w-1/2 pb-28 mt-8 px-28">
       <div className="mb-36">
-        <h2 className="text-center text-xl font-bold ">Flosnexu</h2>
-          <p className="leading-8 text-md px-28 mt-3">
+        <h2 className="text-center text-5xl font-bold text-white">Flosnexu</h2>
+          <p className="leading-8 text-md px-28 mt-3  text-white">
           A FlosNexu tem em sua essência a vontade e o compromisso de mudar a
           atual cultura do mundo que não valoriza, da forma que deveria ser
           valorizada, a questão da energia sustentável. Acreditamos que a
@@ -109,8 +105,8 @@ const About: React.FC = () => {
 
   <div className="w-1/2 mx-4">
     <div className="w-2/3 mx-auto">
-      <h2 className="text-center text-xl font-bold mt-5">Motivação</h2>
-      <p className="leading-8 text-md mt-3 p-4 px-20">
+      <h2 className="text-center text-5xl font-bold mt-5 text-white ">Motivação</h2>
+      <p className="leading-8 text-md text-2xl mt-3 p-4 px-20 text-white">
         O intuito principal do projeto busca
         garantir o acesso universal, confiável, sustentável, moderno e
         acessível à energia limpa. Esse tema vem ganhando cada vez mais
@@ -138,7 +134,7 @@ const About: React.FC = () => {
 
 
       <div className="pb-10">
-        <h2 className="text-center text-xl font-bold mt-5">Integrantes do Projeto</h2>
+        <h2 className="text-center text-5xl font-bold mt-5 text-white">Integrantes do Projeto</h2>
         <div className="flex flex-wrap gap-8 items-center justify-center mt-5">
           {members.map((member) => (
             <UserCard {...member} key={member.name}/>
