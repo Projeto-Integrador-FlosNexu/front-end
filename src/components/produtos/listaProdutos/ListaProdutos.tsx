@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
 import CardProduto from '../cardProdutos/CardProdutos';
+import fundoCadastroCateg from "../../categorias/listaCategorias/ListaCategorias"
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -41,6 +42,7 @@ function ListaProdutos() {
   }, [produtos.length]);
   return (
     <>
+     <div className='fundoCadastroCateg'>
       {produtos.length === 0 && (
         <Dna
           visible={true}
@@ -55,6 +57,7 @@ function ListaProdutos() {
         {produtos.map((produto) => (
           <CardProduto key={produto.id} post={produto} />
         ))}
+      </div>
       </div>
     </>
   );

@@ -28,16 +28,7 @@ function Carousel() {
                     <Slide02 />
                 </SwiperSlide>
                     
-                    {/* <SwiperSlide>
-                        
-                    <Link to='/produtos' className='hover:underline'>
-                        <img
-                            src='https://www.portalsolar.com.br/_next/image?url=%2Fassets%2Fsimulator%2Fenergia-solar-residencial-portal-solar.webp&w=2048&q=75'
-                            alt="Slider"
-                            className='slide-item'
-                        />
-                    </Link>
-                    </SwiperSlide> */}
+                    
                     <SwiperSlide>
                     <Link to='/produtos' className='hover:underline'>
                         <img
