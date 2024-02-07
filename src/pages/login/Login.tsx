@@ -39,8 +39,8 @@ function Login() {
     <>
       <section>
         <div className="form-boxLogin">
-          <form className="flex justify-center items-center flex-col w-4/2 gap-4" onSubmit={login}>
-            <h2 className="text-white text-5xl ">Entrar</h2>
+          <form className="flex justify-between items-center flex-col w-4/2 gap-4" onSubmit={login}>
+            <h2 className="text-white text-5xl">Entrar</h2>
             <div className='input-containerLogin'>
               <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204191560397225994/image.png?ex=65d3d5c8&is=65c160c8&hm=df92915efe0e13a751e8e88f6670cbb081bd8baf0ba94fdf12ba4e2cfbee27e5&" alt="simbolo de uma carta" />
               <div className="inputboxLogin">
@@ -69,7 +69,22 @@ function Login() {
                 />
               </div>
             </div>
-            <button type='submit' className="buttonLogin bg-white w-4/1 py-1.5 flex justify-center">
+            <div className='flex justify-between items-center w-full'> {/* Alteração aqui */}
+              <div className='flex items-center'> {/* Alteração aqui */}
+                <label htmlFor="manterLogado" className="text-white ">
+                  <input
+                    type="checkbox"
+                  />
+                  Manter Logado
+                </label>
+              </div>
+              <p className="text-white font-bold">
+                <p className="text-green-400 hover:underline">
+                  Esqueceu sua senha?
+                </p>
+              </p>
+            </div>
+            <button type='submit' className="buttonLogin text-white w-4/1 py-1.5 flex justify-center">
               {isLoading ? <RotatingLines
                 strokeColor="black"
                 strokeWidth="5"
@@ -84,7 +99,7 @@ function Login() {
 
             <p className='text-white font-bold'>
               Ainda não tem uma conta?{' '}
-              <Link to="/cadastroUsuario" className=" text-green-400  hover:underline">
+              <Link to="/cadastroUsuario" className="text-green-400 hover:underline">
                 Cadastre-se
               </Link>
             </p>

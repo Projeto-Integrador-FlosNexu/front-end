@@ -4,8 +4,6 @@ import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
 import logo from '../../assets/logoFN.png'
-import LogoGoogle from '../../assets/google.png';
-import LogoGit from '../../assets/github.png';
 
 
 function Cadastro() {
@@ -77,18 +75,18 @@ function Cadastro() {
   return (
     <>
       <div className="fundoCadastro ">
-        <div className='posicaoLogo ml-12 mr-20 text-center'>
+        <div className='posicaoLogo text-center'>
           <img src={logo} alt="Logo FlosNexu" />
           <div className='ml-5'>
-            <p className='slogan'>
-              <span></span>
-            </p>
-          </div>
+        <p className='slogan'>
+          <span></span>
+        </p>
+        </div>
         </div>
         <div className='conteudo'>
           <div className='form-boxCadastro'>
             <form onSubmit={cadastrarNovoUsuario}>
-              <h2 className='text-white text-4xl mb-3 mt-6 ml-'>Cadastrar</h2>
+              <h2 className='text-white text-4xl mb-3 ml-'>Cadastrar</h2>
               <div className='input-containerCadastro'>
                 <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204321146200264744/user_1.png?ex=65d44e78&is=65c1d978&hm=67ab9c2abc91dfa403b2f67d5dd76630abf6ec2a1c6ea39db2536a4c89ef246c&' />
                 <div className="inputboxCadastro">
@@ -174,22 +172,13 @@ function Cadastro() {
                 </div>
               </div>
               <div className="flex justify-around w-full gap-8">
-                <button className='buttonCadastro rounded-3xl text-white py-1.5 flex justify-center' type='submit'>
+                <button className='buttonCadastro rounded-3xl text-black bg-white w-4/1 py-1.5 flex justify-center' onClick={back}>
+                  Cancelar
+                </button>
+                <button className='buttonCadastro rounded-3xl text-black bg-white w-4/1 py-1.5 flex justify-center' type='submit'>
                   Cadastrar
                 </button>
               </div>
-              <button className='buttonGoogle mt-3'>
-                <div className='flex justify-center gap-4'>
-                  <img src={LogoGoogle} className="w-5" alt="GoogleImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o Google</span>
-                </div>
-              </button>
-              <button className='buttonGitHub'>
-                <div className='flex justify-center gap-4'>
-                  <img src={LogoGit} className="w-5" alt="GitImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o Google</span>
-                </div>
-              </button>
             </form>
           </div>
         </div>
