@@ -1,0 +1,70 @@
+.card-container {
+    height: 420px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+    background: linear-gradient(0deg, rgb(219, 220, 226) 0%, rgba(219, 220, 226) 5%, rgba(219, 220, 226) 43%);
+}
+
+.user-picture {
+    width: 250px;
+    height: 250px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.user-name {
+    color: black;
+    font-size: 25px;
+}
+
+.user-role {
+    color: rgb(15, 15, 15);
+    
+    font-size: 15px;
+}
+
+.user-details {
+    z-index: 1000;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 20px;
+    bottom: 2px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.user-socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    max-width: fit-content;
+    height: 20px;
+}
+
+.social-link {
+    color: black;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.description-value {
+    color: rgb(15, 15, 15);
+}
