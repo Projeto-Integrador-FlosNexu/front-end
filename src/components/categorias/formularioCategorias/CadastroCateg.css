@@ -1,20 +1,31 @@
 .fundoCadastroCateg {
-    font-family: 'Merienda', cursive;
-    background-image: url(../../../assets/fundocateg.gif);
-    background-color: green;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
+  font-family: 'Merienda', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #CFFF8D, #A8E890, #3CB371, #425F57);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
   }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
   
   .conteudoCateg {
+    background-image:  url(../../../assets/login.png);
     width: 70%;
     height: 650px;
     padding: 90px;
@@ -31,9 +42,11 @@
     color: #ffffff;
     /* Cor do texto sobreposto */
     z-index: 1;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row-reverse;
+    
   }
   
   .conteudoCateg h2 {
@@ -49,7 +62,7 @@
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
   
   }

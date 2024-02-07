@@ -1,5 +1,6 @@
 .fundoHome{
   background-color: #3cb372eb;
+  background: linear-gradient(to top, #3CB371 0%, rgb(255, 255, 255, 1) 45%)
 }
 
 .container {

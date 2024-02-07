@@ -96,10 +96,9 @@ function FormularioCategoria() {
         <>
             <div className="fundoCadastroCateg">
                 <div className="conteudoCateg">
-                    <div className="container flex flex-col mx-auto items-center">
                         <div className="form-boxCadastroCateg">
                             <form onSubmit={gerarNovoCategoria}>
-                                <h2 className='text-black text-4xl mb-3 ml-3 mt-1'>Categoria</h2>
+                                <h2 className='text-white text-4xl mb-3 ml-3 mt-1'>Categoria</h2>
                                 <div className="input-containerCadastroCateg">
                                     <div className="inputboxCadastroCateg">
                                         <input
@@ -139,7 +138,6 @@ function FormularioCategoria() {
                                 </button>
                             </form>
                         </div>
-                    </div>
                 </div>
             </div>
         </>

@@ -8,6 +8,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import './CadastroProdutos.css'
 
 
+
 function FormularioProduto() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -147,7 +148,6 @@ function FormularioProduto() {
     <>
         <div className='fundoCadastroProd'>
           <div className='conteudoCP'>
-            <div className="container flex flex-col mx-auto items-center">
               <div className='form-boxCadastroProd'>
                 <form onSubmit={gerarNovoProduto}>
                   <h2 className='text-white text-4xl mb-3 ml-3 mt-1'>Produto</h2>
@@ -261,7 +261,7 @@ function FormularioProduto() {
                   </button>
                 </form>
               </div>
-            </div>
+            
           </div>
         </div>
     </>
