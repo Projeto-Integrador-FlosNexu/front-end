@@ -5,7 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
 import CardProduto from '../cardProdutos/CardProdutos';
-import fundoCadastroCateg from "../../categorias/listaCategorias/ListaCategorias"
+
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);

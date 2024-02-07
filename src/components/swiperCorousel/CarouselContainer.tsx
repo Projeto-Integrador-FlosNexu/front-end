@@ -1,7 +1,6 @@
 import './CarouselStyle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { Link } from 'react-router-dom';
 import Slide02 from './Slide02';
 import Slide04 from './Slide04';
 import Slide03 from './Slide03';
