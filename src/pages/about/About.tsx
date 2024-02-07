@@ -4,6 +4,7 @@ interface Member {
   linkedin: string;
 }
 
+
 const members: Member[] = [
   {
     name: "Felipe Souza",

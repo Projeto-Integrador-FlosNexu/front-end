@@ -8,7 +8,7 @@ interface CardProdutoProps {
 
 function CardProduto({ post }: CardProdutoProps) {
   return (
-    <div className='w-80 bg-white shadow rounded border '>
+    <div className='w-80 bg-white shadow rounded border'>
       <div>
         <div className="h-48 w-full bg-white flex flex-col justify-between p-1 bg-cover bg-center border-b-2">
           <img src={post.foto} className=' h-48 w-full' alt="" />

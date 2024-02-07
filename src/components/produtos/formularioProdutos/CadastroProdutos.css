@@ -1,7 +1,6 @@
 .fundoCadastroProd {
     font-family: 'Merienda', cursive;
-    background-image: url(../../../assets/fundocad.jpg);
-    background-color: green;
+    background-color: #3cb372eb;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
@@ -58,7 +57,7 @@
     width: 35%;
     height: 40px;
     border-radius: 40px;
-    border: 2px solid #9f9e9e;
+    border: 2px solid #9e9f9e;
     outline: none;
     cursor: pointer;
     font-size: 1em;

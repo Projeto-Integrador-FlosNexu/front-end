@@ -28,7 +28,7 @@ function Carousel() {
                     <Slide02 />
                 </SwiperSlide>
                     
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         
                     <Link to='/produtos' className='hover:underline'>
                         <img
@@ -37,7 +37,7 @@ function Carousel() {
                             className='slide-item'
                         />
                     </Link>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide>
                     <Link to='/produtos' className='hover:underline'>
                         <img

@@ -187,7 +187,7 @@ function Cadastro() {
               <button className='buttonGitHub'>
                 <div className='flex justify-center gap-4'>
                   <img src={LogoGit} className="w-5" alt="GitImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o Google</span>
+                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o GitHub</span>
                 </div>
               </button>
             </form>

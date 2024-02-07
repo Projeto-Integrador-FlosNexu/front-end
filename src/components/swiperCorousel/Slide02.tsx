@@ -7,10 +7,10 @@ function Slide02() {
         <div className="bg-image-slide02 swiper-slide flex justify-center">
   <div className='text-center items-center'>
     <div className="flex flex-col pt-72 justify-items-center items-center gambido-lipe">
-      <h2 className='text-5xl items-center font-bold text-white/80'>
+      <h2 className='text-5xl items-center font-bold text-white'>
         Mude o mundo, comece por você!
       </h2>
-      <p className='text-2xl  my-1 text-white/80'>
+      <p className='text-2xl  my-1 text-white'>
         Soluções energéticas para sua casa e sua empresa.
       </p>
       <div className="flex justify-around my-8">
