@@ -7,6 +7,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import "./Sidebar.css";
 import { toastAlerta } from "../../util/toastAlerta";
 
+
 function Sidebar() {
     const navigate = useNavigate();
     const { usuario, handleLogout } = useContext(AuthContext);
@@ -61,6 +62,7 @@ function Sidebar() {
                             <Link to="/perfil" className="text-white hover:underline  rounded-md p-2 ">
                                 Perfil
                             </Link>
+                            <Link to='/cart'><img src={FlosNexu} alt="Carrinho" className="mr-2 carrinho mt-0"/></Link>
                             <Link to=""
                                 onClick={logout}
                                 className="text-white flex items-center font-bold justify-start h-16 hover:underline rounded-md mt-10 ml-2">

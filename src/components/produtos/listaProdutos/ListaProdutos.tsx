@@ -5,34 +5,33 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
 import CardProduto from '../cardProdutos/CardProdutos';
+import CardProdutoUsuario from "../cardProdutoUsuario/CardProdutoUsuario";
 
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
-
+  const [search, setSearch] = useState("");
   let navigate = useNavigate();
 
+  const [selected, setSelected] = useState<{nome: string; checked: boolean }[]>([]);
   const { usuario, handleLogout } = useContext(AuthContext);
-  const token = usuario.token;
+  // const token = usuario.token;
 
-  useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
-      navigate('/');
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (token === '') {
+  //     alert('Você precisa estar logado');
+  //     navigate('/');
+  //   }
+  // }, [token]);
 
   async function buscarProdutos() {
     try {
       await buscar('/produtos', setProdutos, {
-        headers: {
-          Authorization: token,
-        },
+        headers: {},
       });
     } catch (error: any) {
-      if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente')
-        handleLogout()
+      {
+        alert("Erro ao buscar o Produtos");
       }
     }
   }
@@ -40,10 +39,28 @@ function ListaProdutos() {
   useEffect(() => {
     buscarProdutos();
   }, [produtos.length]);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
+  const selectedArray = selected
+  .filter((item) => item.checked === true)
+  .map((item) => item.nome);
+const filtrarProdutos = produtos.filter((produto) => {
+  const productNameLowerCase = produto.nome.toLowerCase();
+  const searchLowerCase = search.toLowerCase();
+  return searchLowerCase !== ""
+    ? productNameLowerCase.includes(searchLowerCase)
+    : selectedArray.includes(produto.nome.split(" ")[0]);
+});
+
+const filteredProducts =
+  filtrarProdutos.length > 0 ? filtrarProdutos : produtos;
+
   return (
     <>
      <div className='fundoCadastroCateg'>
-      {produtos.length === 0 && (
+      {produtos.length == 0 && (
         <Dna
           visible={true}
           height="200"
@@ -54,11 +71,15 @@ function ListaProdutos() {
         />
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {produtos.map((produto) => (
-          <CardProduto key={produto.id} post={produto} />
-        ))}
-      </div>
-      </div>
+      {usuario.tipo === "dev"
+              ? filteredProducts.map((produto) => (
+                  <CardProduto key={produto.id} post={produto} />
+                ))
+              : filteredProducts.map((produto) => (
+                  <CardProdutoUsuario key={produto.id} produto={produto} />
+                ))}
+          </div>
+        </div>
     </>
   );
 }
