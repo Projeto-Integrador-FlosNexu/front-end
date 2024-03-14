@@ -5,13 +5,18 @@ import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
 import logo from '../../assets/logoFN.png'
 import LogoGoogle from '../../assets/google.png';
-import LogoGit from '../../assets/github.png';
+import { useGoogleLogin } from '@react-oauth/google';
 
+/*import LogoGit from '../../assets/github.png'; ESSE É O LOGO TIPO DO BOTAO DO GITHUB*/
 
 function Cadastro() {
 
 
   let navigate = useNavigate()
+
+  const login = useGoogleLogin({
+    onSuccess: tokenResponse => console.log(tokenResponse),
+  });
 
   const [confirmaSenha, setConfirmaSenha] = useState<string>("")
 
@@ -21,7 +26,7 @@ function Cadastro() {
     email: "",
     foto: "",
     senha: "",
-    tipo: ""
+    tipo: "user"
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
@@ -117,7 +122,7 @@ function Cadastro() {
                   />
                 </div>
               </div>
-              <div className='input-containerCadastro'>
+              {/* <div className='input-containerCadastro'>
                 <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204323382657552394/identification-card.png?ex=65d4508d&is=65c1db8d&hm=3c962330883bd1fc71fe71ed9f90798fac9c2a858056bf8b6b87b799732975a9&' />
                 <div className="inputboxCadastro">
                   <input
@@ -130,7 +135,7 @@ function Cadastro() {
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                   />
                 </div>
-              </div>
+              </div> */}
               <div className='input-containerCadastro'>
                 <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204323543480008755/camera.png?ex=65d450b4&is=65c1dbb4&hm=3e0368cd2d70e83214aa29a57fe68085613352f96af3397f30fe165a628f43d2&' />
                 <div className="inputboxCadastro">
@@ -179,17 +184,17 @@ function Cadastro() {
                 </button>
               </div>
               <button className='buttonGoogle mt-3'>
-                <div className='flex justify-center gap-4'>
+                <div onClick={() => login()} className='flex justify-center gap-4'>
                   <img src={LogoGoogle} className="w-5" alt="GoogleImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o Google</span>
-                </div>
+                  <span className="block text-sm font-medium tracking-wide text-white w-max">Cadastrar com o Google</span>
+                  </div>
               </button>
-              <button className='buttonGitHub'>
+              {/* <button className='buttonGitHub'>
                 <div className='flex justify-center gap-4'>
                   <img src={LogoGit} className="w-5" alt="GitImg" />
                   <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o GitHub</span>
                 </div>
-              </button>
+              </button> ESSE É O BOTAO SEM A LOGICA PARA FAZER CADASTRO COM O GITHUB*/}
             </form>
           </div>
         </div>

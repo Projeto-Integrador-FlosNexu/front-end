@@ -12,10 +12,9 @@ import FormularioProduto from "./components/produtos/formularioProdutos/Formular
 import DeletarProduto from "./components/produtos/deletarProdutos/DeletarProduto";
 import Footer from "./components/footer/Footer";
 import Perfil from "./pages/perfil/Perfil";
-import Sidebar from './components/sidebar/Sidebar';
+import Navbar from './components/navbar/Navbar';
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/cart/Cart';
-
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
     <CartProvider>
       <AuthProvider>
         <BrowserRouter>
-          <Sidebar />
+          <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Home />} />

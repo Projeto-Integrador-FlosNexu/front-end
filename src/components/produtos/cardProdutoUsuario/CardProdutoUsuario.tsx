@@ -13,7 +13,7 @@ function CardProdutoUsuario({ produto }: CardProdutoProps) {
     return (
         <div className="duration-500 bg-white shadow-md w-72 rounded-xl hover:scale-105 hover:shadow-xl">
         <a href="#">
-          <img src={produto.foto} alt="Product" className="object-cover h-80 w-72 rounded-t-xl" />
+          <img src={produto.foto} alt="produto" className="object-cover h-80 w-72 rounded-t-xl" />
           <div className="px-4 py-3 w-72">
             <span className="mr-3 text-xs text-gray-400 uppercase"></span>
             <p className="block text-lg font-bold text-center text-black capitalize truncate">{produto.nome}</p>

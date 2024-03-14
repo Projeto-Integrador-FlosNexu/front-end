@@ -27,8 +27,8 @@ function Perfil() {
         </div>
       <div className='flex gap-8 mt-10 m-4'>
       <Link to="/cadastroProduto" className='border-4 rounded bg-[#bab7b7] text-center text-white py-2 px-4'>Cadastrar Produto</Link>
-      <Link to='/cadastroCategoria' className='border-4 rounded bg-[#bab7b7] text-center text-white py-2 px-4'>Cadastrar Categorias</Link>
-      <div className='border-4 rounded bg-[#bab7b7] text-white text-center py-2 px-4' >Produtos Cadastrados</div>
+      <Link to="/cadastroCategoria" className='border-4 rounded bg-[#bab7b7] text-center text-white py-2 px-4'>Cadastrar Categorias</Link>
+      <Link to="/produtos"className='border-4 rounded bg-[#bab7b7] text-white text-center py-2 px-4' >Produtos Cadastrados</Link>
       </div>
       </div>
       </div>

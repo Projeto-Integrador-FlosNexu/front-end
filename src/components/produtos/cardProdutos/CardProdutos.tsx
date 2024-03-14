@@ -68,7 +68,7 @@ function CardProduto({ post }: CardProdutoProps) {
           {/* Inicio botão adicionar carrinho de  */}
           <div className='mx-4'>
           <button className='border-2 py-2 px-4 bg-green-800 text-white rounded-3xl hover:bg-green-600 active:bg-green-700 disabled:opacity-50 my-5 w-full flex items-center justify-center text-center'>
-            <span className=''>Adicionar ao carrinho HAHAHA</span>
+            <span className=''>Adicionar ao carrinho</span>
             <ShoppingCart size={26} className='ml-1'/>
         
             </button>

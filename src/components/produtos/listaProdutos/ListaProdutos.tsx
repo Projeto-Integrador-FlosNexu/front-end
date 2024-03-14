@@ -47,14 +47,14 @@ function ListaProdutos() {
   .filter((item) => item.checked === true)
   .map((item) => item.nome);
 const filtrarProdutos = produtos.filter((produto) => {
-  const productNameLowerCase = produto.nome.toLowerCase();
+  const produtoNameLowerCase = produto.nome.toLowerCase();
   const searchLowerCase = search.toLowerCase();
   return searchLowerCase !== ""
-    ? productNameLowerCase.includes(searchLowerCase)
+    ? produtoNameLowerCase.includes(searchLowerCase)
     : selectedArray.includes(produto.nome.split(" ")[0]);
 });
 
-const filteredProducts =
+const filteredprodutos =
   filtrarProdutos.length > 0 ? filtrarProdutos : produtos;
 
   return (
@@ -72,10 +72,10 @@ const filteredProducts =
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
       {usuario.tipo === "dev"
-              ? filteredProducts.map((produto) => (
+              ? filteredprodutos.map((produto) => (
                   <CardProduto key={produto.id} post={produto} />
                 ))
-              : filteredProducts.map((produto) => (
+              : filteredprodutos.map((produto) => (
                   <CardProdutoUsuario key={produto.id} produto={produto} />
                 ))}
           </div>
