@@ -16,21 +16,22 @@ function Perfil() {
 
   return (
     <div className='fundoPerfil'>
-      <div className='backdrop-blur-sm bg-transparent border-white border-4
-       rounded '>
-      <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full mt-[-7rem] w-56 mx-auto border-4 border-white relative z-10' />
-      <div className=" flex flex-col text-white text-2xl items-center justify-center">
-       <div className='border-4 rounded mt-10 bg-black bg-opacity-60 p-5'>
-        <p>Nome: {usuario.nome} </p>
-        <p>Email: {usuario.email}</p>
-        <p>{usuario.tipo}</p>
+      <div className=' w-2/5 backdrop-blur-sm bg-white border-white border-4
+       rounded-2xl '>
+        <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='imagem rounded-full mt-[-7rem] mx-auto border-white relative z-10' />
+
+        <div className=" flex flex-col rounded-2xl text-white text-2xl items-center justify-center">
+          <div className='border-4 rounded-2xl mt-10 bg-transparent text-black  p-5'>
+            <p>Nome: {usuario.nome} </p>
+            <p>Email: {usuario.email}</p>
+            <p>Classificação: {usuario.tipo}</p>
+          </div>
+          <div className='flex gap-8 mt-10 m-4'>
+            <Link to="/cadastroProduto" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4'>Cadastrar Produto</Link>
+            <Link to="/cadastroCategoria" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4'>Cadastrar Categorias</Link>
+            <Link to="/produtos" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4' >Produtos Cadastrados</Link>
+          </div>
         </div>
-      <div className='flex gap-8 mt-10 m-4'>
-      <Link to="/cadastroProduto" className='border-4 rounded bg-[#bab7b7] text-center text-white py-2 px-4'>Cadastrar Produto</Link>
-      <Link to="/cadastroCategoria" className='border-4 rounded bg-[#bab7b7] text-center text-white py-2 px-4'>Cadastrar Categorias</Link>
-      <Link to="/produtos"className='border-4 rounded bg-[#bab7b7] text-white text-center py-2 px-4' >Produtos Cadastrados</Link>
-      </div>
-      </div>
       </div>
     </div>
   )

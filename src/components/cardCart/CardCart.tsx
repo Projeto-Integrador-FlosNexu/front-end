@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Produto from "../../models/Produto";
 import { CartContext } from "../../contexts/CartContext";
 import { useEffect, useState } from 'react';
+import './CardCart.css'
 
 interface CardProdutosProps {
     item: Produto
@@ -25,7 +26,7 @@ function CardCart({ item }: CardProdutosProps) {
     //   const cartTotal = getTotal();
     //ESSE CODIGO É O QUADRADINHO DO PRODUTO QUANDO É ADICIONADO NO CARRINHO
     return (
-
+        <div className='fundocart'>
         <div className='flex flex-col rounded-lg overflow-hidden justify-between bg-white' >
             <div className='py-4'>
 
@@ -50,7 +51,7 @@ function CardCart({ item }: CardProdutosProps) {
                 atualizarProduto(item.id, 'decrease');
             }}
           >
-            <i className='bx bx-minus'>-</i>
+            <i className='bx bx-minus'></i>
           </button>
           <span>{item.quantidade}</span>
           <button className=' w-10 text-slate-100 bg-red-500 hover:bg-red-700 
@@ -59,7 +60,7 @@ function CardCart({ item }: CardProdutosProps) {
                 atualizarProduto(item.id, 'increase');
             }}
           >
-            <i className='bx bx-plus'>+</i>
+            <i className='bx bx-plus'></i>
           </button>
         </div>
       </td>
@@ -72,6 +73,7 @@ function CardCart({ item }: CardProdutosProps) {
                 </button>
             </div>
         </div >
+        </div>
     )
 }
 

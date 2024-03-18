@@ -62,7 +62,9 @@
 
 
 .fundoCadastro {
-  font-family: 'Merienda', cursive;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;

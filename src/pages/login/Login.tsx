@@ -1,6 +1,7 @@
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
-
+import email from '../../assets/emailogin.png'
+import senha from '../../assets/senha.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import UsuarioLogin from '../../models/UsuarioLogin';
@@ -42,7 +43,7 @@ function Login() {
           <form className="flex justify-between items-center flex-col w-4/2 gap-4" onSubmit={login}>
             <h2 className="text-white text-5xl">Entrar</h2>
             <div className='input-containerLogin'>
-              <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204191560397225994/image.png?ex=65d3d5c8&is=65c160c8&hm=df92915efe0e13a751e8e88f6670cbb081bd8baf0ba94fdf12ba4e2cfbee27e5&" alt="simbolo de uma carta" />
+              <img src={email} alt="simbolo de uma carta" />
               <div className="inputboxLogin">
                 <input
                   type="text"
@@ -56,7 +57,7 @@ function Login() {
               </div>
             </div>
             <div className='input-containerLogin'>
-              <img src="https://cdn.discordapp.com/attachments/1159532272379248795/1204192810295890010/image.png?ex=65d3d6f2&is=65c161f2&hm=eb7142301d54707ccb8bca22cd67360cb1f65bc09ed536bde89833b275104237&" alt="simbolo de um cadeado" />
+              <img src={senha} alt="simbolo de um cadeado" />
               <div className="inputboxLogin">
                 <input
                   type="password"

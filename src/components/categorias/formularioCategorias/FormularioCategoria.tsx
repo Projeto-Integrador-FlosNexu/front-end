@@ -96,9 +96,9 @@ function FormularioCategoria() {
         <>
             <div className="fundoCadastroCateg">
                 <div className="conteudoCateg">
-                        <div className="form-boxCadastroCateg">
+                        <div className="form-boxCadastroCateg mt-48">
                             <form onSubmit={gerarNovoCategoria}>
-                                <h2 className='text-white text-4xl mb-3 ml-3 mt-1'>Categoria</h2>
+                                <h2 className='text-white text-4xl mb-3 ml-3 mt-10'>Categoria</h2>
                                 <div className="input-containerCadastroCateg">
                                     <div className="inputboxCadastroCateg">
                                         <input
@@ -124,7 +124,7 @@ function FormularioCategoria() {
                                     </div>
                                 </div>
                                 <button
-                                    className="rounded-3xl disabled:bg-slate-200 bg-white hover:bg-indigo-800 text-black font-bold w-1/2 mx-auto  py-2 flex justify-center"
+                                    className="border-2 border-[#82D338] rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-4"
                                     type="submit"
                                 >
 

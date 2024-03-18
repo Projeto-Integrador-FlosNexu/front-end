@@ -1,5 +1,7 @@
 .fundoPerfil{
-  font-family: 'Merienda', cursive;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,4 +25,9 @@
     background-position: 0% 50%;
   }
 }
-  
+  .imagem{
+    width: 24rem;
+    border-width:1rem ;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.393),
+    5px 5px 5px rgba(35, 35, 35, 0.474);
+  }

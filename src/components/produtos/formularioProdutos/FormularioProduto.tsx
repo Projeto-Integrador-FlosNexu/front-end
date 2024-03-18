@@ -6,6 +6,7 @@ import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
 import { RotatingLines } from 'react-loader-spinner';
 import './CadastroProdutos.css'
+import logo from '../../../assets/Logozin.png'
 
 
 
@@ -104,7 +105,7 @@ function FormularioProduto() {
 
     if (id != undefined) {
       try {
-        await atualizar(`/produtos`, produto, setProduto, {
+        await atualizar(`/editarProduto`, produto, setProduto, {
           headers: {
             Authorization: token,
           },
@@ -146,124 +147,122 @@ function FormularioProduto() {
 
   return (
     <>
-        <div className='fundoCadastroProd'>
-          <div className='conteudoCP'>
-              <div className='form-boxCadastroProd'>
-                <form onSubmit={gerarNovoProduto}>
-                  <h2 className='text-white text-4xl mb-3 ml-3 mt-1'>Produto</h2>
-                  <div className='input-containerCadastroProd'>
+      <div className='fundoCadastroProd'>
+        <div className='conteudoCP'>
+          <div className='form-boxCadastroProd'>
+            <form onSubmit={gerarNovoProduto}>
+              <h2 className='text-white text-5xl mb-3 ml-3 mt-9'>Produto</h2>
+              <div className='input-containerCadastroProd'>
 
-                    <div className='inputboxCadastroProd'>
-                      <input
-                        value={produto.nome}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Nome"
-                        name="nome"
-                        required
-                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-
-                    <div className='inputboxCadastroProd'>
-
-                      <input
-                        value={produto.descricao}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Descrição"
-                        name="descricao"
-                        required
-                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-
-                    <div className='inputboxCadastroProd'>
-                      <input
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Preço"
-                        name="preco"
-                        required
-                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-                    <div className='inputboxCadastroProd'>
-                      <input
-                        value={produto.foto}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Foto do produto"
-                        name="foto"
-                        required
-                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-                    <div className='inputboxCadastroProd'>
-
-                      <input
-                        value={produto.marca}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Marca"
-                        name="marca"
-                        required
-                        className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-
-                    <div className='inputboxCadastroProd'>
-                      <input
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Quantidade em estoque"
-                        name="quantidade"
-                        required
-                        className="placeholderCadastroProd rounded-3xl border-2 border-slate-700 p-2"
-                      />
-                    </div>
-                  </div>
-                  <div className='input-containerCadastroProd'>
-
-                    <select name="categoria" id="categoria"
-                      className='inputboxCadastroProd placeholderCadastroProd rounded-3xl border-2 border-slate-700 p-2' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
-                      <option className='text-black ' text-black value="" selected disabled>Selecione uma categoria</option>
-                      {categorias.map((categoria) => (
-                        <>
-                          <option value={categoria.id} >{categoria.descricao}</option>
-                        </>
-                      ))}
-                    </select>
-
-
-                  </div>
-                  <button disabled={carregandoCategoria} type='submit' className='buttonCadastroProd rounded-3xl disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-black font-bold w-1/2 mx-auto  py-2 flex justify-center'>
-                    {isLoading ?
-
-                      <RotatingLines
-                        strokeColor="black"
-                        strokeWidth="5"
-                        animationDuration="1"
-                        width="24"
-                        visible={true}
-                      />
-                      : id !== undefined ? 'Editar' : 'Cadastrar'}
-                  </button>
-                </form>
+                <div className='inputboxCadastroProd'>
+                  <input
+                    value={produto.nome}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Nome"
+                    name="nome"
+                    required
+                    className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                  />
+                </div>
               </div>
-            
+              <div className='input-containerCadastroProd'>
+
+                <div className='inputboxCadastroProd'>
+
+                  <input
+                    value={produto.descricao}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Descrição"
+                    name="descricao"
+                    required
+                    className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastroProd'>
+
+                <div className='inputboxCadastroProd'>
+                  <input
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Preço"
+                    name="preco"
+                    required
+                    className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastroProd'>
+                <div className='inputboxCadastroProd'>
+                  <input
+                    value={produto.foto}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Foto do produto"
+                    name="foto"
+                    required
+                    className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastroProd'>
+                <div className='inputboxCadastroProd'>
+
+                  <input
+                    value={produto.marca}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Marca"
+                    name="marca"
+                    required
+                    className="placeholderCadastroProd border-2 border-slate-700 rounded-3xl p-2"
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastroProd'>
+
+                <div className='inputboxCadastroProd'>
+                  <input
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="text"
+                    placeholder="Quantidade"
+                    name="quantidade"
+                    required
+                    className="placeholderCadastroProd rounded-3xl border-2 border-slate-700 p-2"
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastroProd'>
+
+                <select name="categoria" id="categoria" className='inputboxCadastroProd placeholderCadastroProd rounded-2xl w-60 text-black border-2 border-slate-700 p-2 bg-white' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
+                  <option className='text-black bg-white' value="" selected disabled>Selecione uma categoria</option>
+                  {categorias.map((categoria) => (
+                    <option key={categoria.id} className='bg-white w-50' value={categoria.id}>{categoria.nome}</option>
+                  ))}
+                </select>
+
+
+
+              </div>
+              <button disabled={carregandoCategoria} type='submit' className='buttonCadastroProd border-2 border-[#82D338] rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-2'>
+                {isLoading ?
+
+                  <RotatingLines
+                    strokeColor="black"
+                    strokeWidth="5"
+                    animationDuration="1"
+                    width="24"
+                    visible={true}
+                  />
+                  : id !== undefined ? 'Editar' : 'Cadastrar'}
+              </button>
+            </form>
           </div>
+
         </div>
+      </div>
     </>
   );
 }

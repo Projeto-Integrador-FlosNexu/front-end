@@ -4,6 +4,7 @@ import { AuthContext } from '../../../contexts/AuthContext'
 import Produto from '../../../models/Produto'
 import { buscar, deletar } from '../../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
+import { toastAlerta } from '../../../util/toastAlerta'
 
 function DeletarProduto() {
 
@@ -22,7 +23,7 @@ function DeletarProduto() {
     try {
       await buscar(`/produtos/${id}`, setProduto, {
         headers: {
-          'Authorization': token
+          Authorization: token,
         }
       })
     } catch (error: any) {
@@ -51,23 +52,18 @@ function DeletarProduto() {
   }
 
   async function deletarProduto() {
-    setIsLoading(true)
-
     try {
-      await deletar(`/produtos/${id}`, {
+      await deletar(`/deletarProduto/${id}`, {
         headers: {
-          'Authorization': token
-        }
-      })
+          Authorization: token,
+        },
+      });
 
-      alert('Produto apagada com sucesso')
-
+      toastAlerta("Produto apagado com sucesso", "sucesso");
     } catch (error) {
-      alert('Erro ao apagar o Produto')
+      toastAlerta("Erro ao apagar o Produto", "erro");
     }
-
-    setIsLoading(false)
-    retornar()
+    retornar();
   }
   return (
     <div className='container w-1/3 mx-auto'>
@@ -110,4 +106,4 @@ function DeletarProduto() {
   )
 }
 
-export default DeletarProduto
+export default DeletarProduto;

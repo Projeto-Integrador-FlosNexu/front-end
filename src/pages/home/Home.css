@@ -1,38 +1,180 @@
+
 .fundoHome{
-  background-color: #3cb372eb;
-  background: linear-gradient(to top, #3CB371 0%, rgb(255, 255, 255, 1) 45%)
+  background-color: #ffffff;
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
   display: flex;
-  justify-content: space-around; 
-  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+.containerprodutos {
+  display: flex;
+  margin-top: 5rem;
+  margin-left: 7.8rem;
+
+}
+.container1{
+  display: flex;
+  align-items: center;
+
+}
+   .container2{
+  display: flex;
+  align-items: center;
+}
+.container3{
+  display: flex;
+  align-items: center;
   
 }
-   
+.container10{
+  display: flex;
+  align-items: center;
+  margin-left: 7%;
+  
+}
    .carrossel{
     z-index: 1;
    }
    
-   .cardLogin {
+   .cardImagem1 {
     position: relative; /* Altere de 'top' para 'absolute' */
-    width: 300px;
-    height: 500px;
-    background: transparent;
+    width: 450px;
+    height: 652.3px;
+    background:url(https://i.pinimg.com/564x/99/93/c3/9993c3402f741c45fc800acc03b51635.jpg);
     border: 2px solid rgb(253, 252, 252);
-    border-radius: 20px;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    bottom: 200px;
-    z-index: 2;
-    
+    top:40%;
     text-decoration: black;
+    left:7%;
+    border-radius: 2rem;
     
   }
-
+  .cardImagem2 {
+    position: relative; /* Altere de 'top' para 'absolute' */
+    width: 670px;
+    height: 320px;
+    background: url('../../assets/fundo2e42.jpg');
+    background-repeat: cover;
+    border: 2px solid rgb(253, 252, 252);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    text-decoration: black;
+    left:7.9%;
+    margin-top: -332px;
+    border-radius: 2rem;
+  }
+  
+  
+  .cardImagem3 {
+    position: relative; /* Altere de 'top' para 'absolute' */
+    width: 400px;
+    height: 320px;
+    background: url(https://i.pinimg.com/564x/1d/8e/57/1d8e573de39017b124cd67b068842b2d.jpg);
+    border: 2px solid rgb(253, 252, 252);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    text-decoration: black;
+    left:-36.2%;
+    border-radius: 2rem;
+    
+  }
+  .cardImagem4 {
+    position: relative; /* Altere de 'top' para 'absolute' */
+    width: 670px;
+    height: 320px;
+    background: url('../../assets/fundo2e42.jpg');
+    border: 2px solid rgb(253, 252, 252);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 330.8px;
+    text-decoration: black;
+    left:-50%;
+    border-radius: 2rem;
+    
+  }
+  .cardImagem5 {
+    position: relative; /* Altere de 'top' para 'absolute' */
+    width: 400px;
+    height: 320px;
+    background: url('https://i.pinimg.com/564x/1d/8e/57/1d8e573de39017b124cd67b068842b2d.jpg');
+    border: 2px solid rgb(253, 252, 252);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -332px;
+    text-decoration: black;
+    left:-87.5%;
+    border-radius: 2rem;
+    
+  }
+  .cardFrete {
+     /* Altere de 'top' para 'absolute' */
+    width: 529px;
+    height: 100px;
+    background-color: transparent;
+    border:transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: black;
+    margin-left: 10%;
+  }
+  .imagemfrete{
+    width: 150px;
+  }
+  .cardSac {
+    width: 529px;
+    height: 100px;
+    background-color: transparent;
+    border:transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    text-decoration: black;
+    margin-left: 10%;
+  }
+  .imagemsac{
+    width: 60px;
+  }
+  .cardGarantia {
+    width: 529px;
+    height: 100px;
+    background-color: transparent;
+    border:transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    text-decoration: black;
+    margin-left: 10%;
+  }
+  .imagemgarantia{
+    width: 64px;
+  }
   .cardLogin:hover{
     transform: scale3d(1.1, 1.1, 1);
   }
@@ -49,14 +191,134 @@
     font-weight: 600;
   }
   
-  .imagem-conta {
+  .imagem-conta1 {
+    display: flex;
+    width: 180px;
+    position:relative;
+    
+  }
+  .imagem-conta9 {
+    display: flex;
+    width: 200px;
+    position:relative;
+    
+  }
+  .imagemconta10{
+    display: flex;
+    width: 200px;
+    position:relative;
+  }
+  .imagem-conta11{
+    display: flex;
+    width: 165px;
+    position:relative;
+  }
+  .imagem-conta12{
+    display: flex;
+    width: 210px;
+    position:relative;
+  }
+  .imagem-conta13{
+    display: flex;
+    width: 210px;
+    position:relative;
+  }
+  .imagem-conta2 {
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 150px;
+   margin-right: 15px;
+   margin-right: 25rem;
+    
+  }
+  .imagem-conta3 {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    
+  }
+  .imagem-conta4 {
+    display: flex;
+    margin: 0 auto;
+    width: 30%;
+    
+    
+  }
+  .imagem-conta6 {
+    display: flex;
+    width: 100%;
+    margin-top: -30%;
+      
+  }
+  .imagem-conta5 {
     display: block;
     margin: 0 auto;
-    width: 150%;
-    max-width: 200px;
+    width: 100%;
+    
   }
 
- 
-  
-  /* Restante do seu CSS continua aqui */
-  
+
+  .cardLogin2 {
+ /* Altere de 'top' para 'absolute' */
+    width: 250px;
+    height: 450px;
+    background-color: transparent;
+    border: 2px solid rgba(77, 76, 76, 0.562);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: black;
+    margin-left: 1rem;
+    border-radius: 2rem;
+  }
+  .produtosfrase{
+    width: 5px;
+    height: 10px;
+    background-color: red;
+    border:transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    text-decoration: black;
+    justify-content: center;
+    
+  }
+  .custom-heading {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 11rem;
+    position: relative;
+}
+
+.custom-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Ajuste conforme necessário para a distância desejada */
+    width: 100%;
+    height: 2px; /* Ajuste conforme necessário para a espessura desejada */
+    background-color: black; /* Cor da linha */
+}
+
+.nomeproduto{
+  font-weight: bolder;
+  font-size: 150%;
+}
+.marcaproduto{
+  font-size:126%;
+}
+  .precoproduto{
+    font-weight: bolder;
+    font-size:250%;
+  }
+  .informacoes{
+    justify-content: center;
+    align-items: center;
+  }
+  .textovei{
+    color: rgb(130,211,56);
+  }

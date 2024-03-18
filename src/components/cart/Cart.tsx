@@ -4,6 +4,7 @@ import { CartContext } from "../../contexts/CartContext";
 import CardCart from "../cardCart/CardCart";
 import Summary from "../sumary/Sumary";
 import '../sumary/Sumary.css'
+import './Cart.css'
 
 
 function Cart() {
@@ -26,6 +27,7 @@ function Cart() {
       const cartTotal = getTotal();
     
     return (
+      <div className="fundocartinho">
         <div className="
                 bg-gray-200 
                 flex 
@@ -52,6 +54,7 @@ function Cart() {
             <aside>
             <Summary total={cartTotal} />
           </aside>
+        </div>
         </div>
         
     )

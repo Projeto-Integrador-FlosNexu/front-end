@@ -26,15 +26,21 @@ export function CartProvider({ children }: CartProviderProps) {
     const quantidadeItems = items.length
 
     function adicionarProdutos(produto: Produto) {
-        const indice = items.find(items => items.id === produto.id)
-        if (indice !== undefined) {
-            toastAlerta('Este produto já Adicionado', 'info')
-        } else {
-            setItems(state => [...state, produto])
-            toastAlerta('Produto Adicionado!', 'sucesso')
-        }
-    }
-
+      const produtoExistenteIndex = items.findIndex(item => item.id === produto.id);
+  
+      if (produtoExistenteIndex !== -1) {
+          // Se o produto já existir no carrinho, atualize apenas a quantidade
+          const novoCart = [...items];
+          novoCart[produtoExistenteIndex].quantidade += 1;
+          setItems(novoCart);
+      } else {
+          // Se o produto ainda não estiver no carrinho, adicione-o com quantidade 1
+          setItems(prevItems => [...prevItems, { ...produto, quantidade: 1 }]);
+      }
+  
+      toastAlerta('Produto Adicionado!', 'sucesso');
+  }
+  
     function removerProduto(produtoId: number) {
         const indice = items.findIndex(items => items.id === produtoId)
         let novoCart = [...items]
