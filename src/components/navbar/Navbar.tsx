@@ -4,9 +4,12 @@ import { AuthContext } from '../../contexts/AuthContext';
 import './NavBar.css';
 import pesquisa from '../../assets/pesquisa.png'
 import { toastAlerta } from '../../util/toastAlerta';
+<<<<<<< HEAD
 import login from '../../assets/login.png'
 import LogoVerde from '../../assets/Logozin.png'
 import ShoppingCart from '../../assets/shoppingcart.png'
+=======
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
 
 function Navbar() {
 
@@ -96,11 +99,15 @@ function Navbar() {
                   <Link to='/servicos' className='servico'>SERVIÇOS</Link>
                   <Link to='/about' className=' sobre'>SOBRE</Link>
 
+<<<<<<< HEAD
 
                 </ul>
               </div>
               <div className='flex barrapesquisa text-black' ref={searchBarRef}>
                 <img className='lupa' src={pesquisa} />
+=======
+              <div className='flex gap-4 relative barrapesquisa text-black' ref={searchBarRef}>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
                 {/* Barra de pesquisa */}
                 <input
                   type="text"
@@ -123,6 +130,7 @@ function Navbar() {
                 )}
               </div>
             </div>
+<<<<<<< HEAD
             <div>
               <Link to='/home' className=''>
                 <img src={LogoVerde} alt="Paint logo" className='imglogo' />
@@ -143,6 +151,9 @@ function Navbar() {
             </div>
           </div >
 
+=======
+          </div>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
         </>
       );
 
@@ -151,6 +162,7 @@ function Navbar() {
     } else if (usuario.token == "") { // essa é a navBar que deve aparecer quando nao esta logado
       navbarComponent = (
         <>
+<<<<<<< HEAD
           <div className="nav">
             <div className='caixanav'>
               <div className='caixanav' >
@@ -172,6 +184,15 @@ function Navbar() {
               </div>
               <div className='flex barrapesquisa text-black' ref={searchBarRef}>
                 <img className='lupa' src={pesquisa} />
+=======
+          <div className='w-full background py-4 border-b-[1px] border-white mobilemax:hidden'>
+            <div className="container flex items-center ml-12">
+              <Link to='/home' className='font-semibold uppercase flex items-center ml-0 mr-20 logo-container'>
+                <img src={'paintLogo'} alt="Paint logo" className="mr-2 leading-7 logo" />
+                Aquarelando
+              </Link>
+              <div className='flex gap-4 relative barrapesquisa text-black' ref={searchBarRef}>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
                 {/* Barra de pesquisa */}
                 <input
                   type="text"
@@ -193,22 +214,46 @@ function Navbar() {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
+=======
+              <div className='links font-light links'>
+                <Link to='/home' className='mr-8'>HOME</Link>
+                <div className="dropdown">
+                  <button className="dropbtn">PRODUTOS
+                    <i className="fa fa-caret-down"></i>
+                  </button>
+                  <div className="dropdown-content">
+                    <a href="#">Painel Solar</a>
+                    <a href="#">blabla2</a>
+                    <a href="#">blabla3</a>
+                  </div>
+                </div>
+                <Link to='/servicos' className='mr-8'>SERVIÇOS</Link>
+                <Link to='/sobre' className='mr-8'>SOBRE</Link>
+              </div>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
             </div>
             <div>
               <Link to='/home' className=''>
                 <img src={LogoVerde} alt="Paint logo" className='imglogo' />
               </Link>
             </div>
+<<<<<<< HEAD
 
           </div >
 
 
+=======
+            <hr />
+          </div>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
         </>
       );
       //USUÃRIO LOGADO: BOTÃƒO DESLOGAR, PERFIL
     } else {
       navbarComponent = (
         <>
+<<<<<<< HEAD
           <div className="nav">
             <div className='caixanav'>
               <div className='caixanav' >
@@ -233,6 +278,15 @@ function Navbar() {
 
               <div className='flex barrapesquisa text-black' ref={searchBarRef}>
                 <img className='lupa' src={pesquisa} />
+=======
+          <div className='w-full background py-4 border-b-[1px] border-white mobilemax:hidden'>
+            <div className="container flex items-center ml-12">
+              <Link to='/home' className='font-semibold uppercase flex items-center ml-0 mr-20 logo-container'>
+                <img src={'paintLogo'} alt="Paint logo" className="mr-2 leading-7 logo" />
+                Aquarelando
+              </Link>
+              <div className='flex gap-4 relative barrapesquisa text-black' ref={searchBarRef}>
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
                 {/* Barra de pesquisa */}
                 <input
                   type="text"
@@ -275,10 +329,21 @@ function Navbar() {
                 <Link to='/home' className='  -mt-8' onClick={logout}>Sair</Link>
               </div>
             </div>
+<<<<<<< HEAD
 
           </div >
 
 
+=======
+            <div className='flex gap-5 mr-12'>
+              <Link to='/cart'><img src={'ShoppingCart'} alt="Carrinho" className="mr-2 carrinho mt-0" /></Link>
+              <Link to='/perfil' ><img src={'IconPerfil'} alt="Perfil" className='mr-2 perfil mt-0' /> </Link>
+              <Link to='/login' className='rounded-full bg-[#fd98b4] text-white py-1 px-4 mt-0' onClick={logout}>Desconectar</Link>
+            </div>
+            <hr />
+          </div>
+
+>>>>>>> c62a83934f0763c76cd9561e5cbbc0cd4ddc3cb1
         </>
       );
     }
