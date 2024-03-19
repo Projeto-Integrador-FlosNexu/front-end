@@ -14,6 +14,7 @@ html,
 /* Navbar section */
 
 .nav {
+    display: flex;
     width:900px;
     height: 65px;
     position: fixed;
@@ -27,12 +28,11 @@ html,
     transition: all 0.4s ease;
 }
 .caixanav {
-    width: 120%;
+    width: 60vw;
     background-color: #ddd;
     height: 70px;
     display: flex;
-    margin-left: 40%;
-    margin-right: 30%;
+    margin-left: 10%;
     border-radius: 17px;
     align-items: center;
     justify-content: flex-start; /* Correção aqui */
@@ -41,26 +41,6 @@ html,
     font-size: larger;
     font-weight: bold;
 }
-/* Media qurey section */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-   
-    .nav div.logo {
-        margin-left: 15px;
-    }
-   
-}
-/* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
-
-
-
 
 @-webkit-keyframes inM {
     50% {
@@ -212,7 +192,7 @@ html,
     font-family: inherit;
     margin: 0;
     border-radius: 40px;
-    position: fixed;
+    /* position: fixed; */
     top:2.6%;
     font-size:17px;
   }
@@ -373,22 +353,9 @@ html,
    text-decoration: underline;
   }
   
-  .caixanav a:hover{
-    color: rgb(130,211,56);
-    border-radius: 10px;
-    height: 50px;
-    float: none;
-  }
-  .caixanav a:hover{
-    color:rgb(130,211,56);
-    text-decoration: underline;
-    float: none;
-  }
-  
-  
   .barrapesquisa{
-    top: 6%; /* Posiciona o elemento na metade superior da tela */
-    left: 46%; /* Posiciona o elemento na metade esquerda da tela */
+    top: 8%; /* Posiciona o elemento na metade superior da tela */
+    left: 44%; /* Posiciona o elemento na metade esquerda da tela */
     transform: translate(-50%, -50%);
     z-index: 2;
     position: fixed;
@@ -404,16 +371,13 @@ html,
    
   }
   .imglogo{
-    position: absolute;
     width: 200px;
-    margin-top: -87px;
-    margin-left: 340px;
    
   }
   .carrinho{
     position: absolute;
     margin-top: -1.9rem;
-    margin-left: -7rem;
+    margin-left: -1rem;
   }
   .imagemperfil{
     position: absolute;
@@ -421,11 +385,11 @@ html,
     margin-left: 8rem;
   }
   .servico{
-    margin-left:95px;
+    margin-left:9px;
   }
 
   .sobre{
-    margin-left:20px;
+    margin-left:9px;
     margin-right: 20px;
   }
 
@@ -443,4 +407,3 @@ html,
     /* Mantém a proporção da imagem */
     margin-top: 1.3rem; /* Ajuste o espaçamento entre o ícone e o texto */
   }
-

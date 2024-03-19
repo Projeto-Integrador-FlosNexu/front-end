@@ -15,8 +15,8 @@ function UserCard({ name, role, linkedin, github,image }: UserInfo) {
                 <div>
                     <div className='text-center '>
                         <div className="description  ">
-                            <span>Status:</span>
-                            <span className="description-value">  Cursando</span>
+                            <span>Formação: Sistemas de Informação</span>
+                            <span className="description-value"></span>
                         </div>
 
                         <div className="description  ">
