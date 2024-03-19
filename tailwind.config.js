@@ -5,8 +5,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      screens: {
+    extend: {screens: {
       'mobilemax': {'max': '641px', },
       'mobilemin': '640px',
    }},

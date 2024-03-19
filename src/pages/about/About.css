@@ -34,7 +34,7 @@
   font-weight: 400;
   font-style: normal;
  
-   background: linear-gradient(45deg, #CFFF8D, #A8E890, #3CB371, #425F57);
+  background: linear-gradient(45deg, #000000, #000000, #538921, #32570f);
    background-size: 300% 300%;
    animation: colors 5s ease infinite;
  }

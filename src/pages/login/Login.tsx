@@ -80,14 +80,14 @@ function Login() {
                 </label>
               </div>
               <p className="text-white font-bold">
-                <p className="text-green-400 hover:underline">
+                <p className="text-white hover:underline">
                   Esqueceu sua senha?
                 </p>
               </p>
             </div>
             <button type='submit' className="buttonLogin text-white w-4/1 py-1.5 flex justify-center">
               {isLoading ? <RotatingLines
-                strokeColor="black"
+                strokeColor="white"
                 strokeWidth="5"
                 animationDuration="0.75"
                 width="24"
@@ -100,7 +100,7 @@ function Login() {
 
             <p className='text-white font-bold'>
               Ainda não tem uma conta?{' '}
-              <Link to="/cadastroUsuario" className="text-green-400 hover:underline">
+              <Link to="/cadastroUsuario" className="text-white hover:underline">
                 Cadastre-se
               </Link>
             </p>
