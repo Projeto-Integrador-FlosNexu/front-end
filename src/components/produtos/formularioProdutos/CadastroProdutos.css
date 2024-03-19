@@ -5,7 +5,7 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #CFFF8D, #A8E890, #3CB371, #425F57);
+  background: linear-gradient(45deg, #000000, #000000, #538921, #32570f);
   background-size: 300% 300%;
   animation: colors 10s ease infinite;
 }
@@ -25,7 +25,6 @@
 }
   
   .conteudoCP {
-    background-image:  url(../../../assets/Logozin.png);
     width: 70%;
     height: fit-content;
     padding: 90px;
@@ -49,14 +48,17 @@
     border-radius: 20px;
     background-position-x: -130px;
   }
+ .imagemflos{
+  width: 100vw;
  
+ }
   
   .conteudoCP h2 {
     text-align: top; 
   }
   
   .form-boxCadastroProd {
-    position: relative;
+    position: flex;
     width: 350px;
     height: fit-content;
     background: transparent;

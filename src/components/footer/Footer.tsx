@@ -18,7 +18,7 @@ function Footer() {
       footerComponent = (
         <>
         <div className='fundofooter'>
-          <div className="flex justify-center mb-4 bg-[#1C1C1C] text-[#82D338]">
+          <div className="flex w-full justify-center mb-4 bg-[#1C1C1C] text-[#82D338]">
             <div className="container flex flex-col items-center mt-8 ">
               <p className='text-xl font-bold'>FlosNexu | Copyright: </p>
               <p className='text-lg'>Acesse nossas redes sociais</p>
@@ -34,7 +34,7 @@ function Footer() {
         footerComponent = (
           <>
           <div className='fundofooter'>
-            <div className="flex justify-center bg-[#1C1C1C] text-[#82D338]">
+            <div className="flex  w-full justify-center bg-[#1C1C1C] text-[#82D338]">
               <div className="container flex flex-col items-center mt-8 ">
                 <p className='text-xl font-bold'>FlosNexu | Copyright: </p>
                

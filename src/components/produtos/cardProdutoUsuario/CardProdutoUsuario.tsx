@@ -11,7 +11,7 @@ function CardProdutoUsuario({ produto }: CardProdutoProps) {
     const { adicionarProdutos } = useContext(CartContext)
 
     return (
-        <div className="duration-500 bg-white shadow-md w-72 rounded-xl hover:scale-105 hover:shadow-xl">
+        <div className="duration-500 bg-white shadow-md w-72 mb-8 mt-4 rounded-xl hover:scale-105 hover:shadow-xl">
         <a href="#">
           <img src={produto.foto} alt="Product" className="object-cover h-80 w-72 rounded-t-xl" />
           <div className="px-4 py-3 w-72">

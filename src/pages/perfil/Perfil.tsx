@@ -27,7 +27,7 @@ function Perfil() {
             <p>Classificação: {usuario.tipo}</p>
           </div>
           <div className='flex gap-8 mt-10 m-4'>
-            <Link to="/cadastroProduto" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4'>Cadastrar Produto</Link>
+            <Link to="/produtos/novo" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4'>Cadastrar Produto</Link>
             <Link to="/cadastroCategoria" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4'>Cadastrar Categorias</Link>
             <Link to="/produtos" className='border-2 border-[#82D338] rounded-2xl bg-transparent text-center text-[#82D338] py-2 px-4' >Produtos Cadastrados</Link>
           </div>
