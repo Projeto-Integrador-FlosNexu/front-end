@@ -5,10 +5,11 @@ import Produto from '../../../models/Produto'
 import { buscar, deletar } from '../../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
 import { toastAlerta } from '../../../util/toastAlerta'
+import './DeletarProduto.css'
 
 function DeletarProduto() {
 
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isLoading] = useState<boolean>(false)
 
   const [produto, setProduto] = useState<Produto>({} as Produto)
 
@@ -53,7 +54,7 @@ function DeletarProduto() {
 
   async function deletarProduto() {
     try {
-      await deletar(`/deletarProduto/${id}`, {
+      await deletar(`/produtos/deletar/${id}`, {
         headers: {
           Authorization: token,
         },
@@ -66,43 +67,50 @@ function DeletarProduto() {
     retornar();
   }
   return (
-    <div className='container w-1/3 mx-auto'>
-      <h1 className='text-4xl text-center my-4'>Deletar produto</h1>
+    <>
+      <div className='fundoDeletar '>
+        <div className='w-[50rem] rounded-3xl mx-auto  bg-white'>
+          <h1 className='text-4xl text-center my-4'>Deletar produto</h1>
 
-      <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o produto a seguir?</p>
+          <p className='text-center font-bold text-2xl mb-4'>Tem certeza de que deseja apagar o produto a seguir?</p>
 
-      <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
-      <div>
-        <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-          <img src={produto.foto} className='h-100' alt="" />
-        </div>
-        <div className='p-4 '>
-          <p>Preço: {produto.descricao} </p>
-          <h4 className='text-lg font-semibold uppercase'>{produto.nome}</h4>
-          <p>{produto.descricao}</p>
-          <p>Categoria: {produto.categoria?.descricao}</p>
-          <p>Marca: {produto.marca}</p>
+          <div className=' border flex flex-col rounded overflow-hidden justify-center'>
+            <div className=' flex flex-col items-center'>
+              <div className="flex py-2 px-4 items-center ">
+                <img src={produto.foto} className='h-100' alt="" />
+              </div>
+              <div className='p-4 '>
+              <h4 className='text-lg font-semibold uppercase'>{produto.nome}</h4>
+                <h1>PREÇO: {Intl.NumberFormat('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'}).format(produto.preco)}</h1>
+                
+                <p>{produto.descricao}</p>
+                
+                <p>Marca: {produto.marca}</p>
+              </div>
+            </div>
+            <div className="flex rounded-3xl">
+              <button className='text-slate-100 text-2xl bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
+              <button className='w-full text-slate-100 text-2xl bg-[#82D338] hover:bg-[#32CD32] flex items-center justify-center' onClick={deletarProduto}>
+
+                {isLoading ?
+                  <RotatingLines
+                    strokeColor="white"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="24"
+                    visible={true}
+                  /> :
+                  <span>Sim</span>
+                }
+
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-        <div className="flex">
-          <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-          <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarProduto}>
-
-            {isLoading ?
-              <RotatingLines
-                strokeColor="white"
-                strokeWidth="5"
-                animationDuration="0.75"
-                width="24"
-                visible={true}
-              /> :
-              <span>Sim</span>
-            }
-
-          </button>
-        </div>
-      </div>
-    </div>
+    </>
   )
 }
 

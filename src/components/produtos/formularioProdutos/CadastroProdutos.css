@@ -1,5 +1,8 @@
 .fundoCadastroProd {
-  font-family: 'Merienda', cursive;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,8 +85,11 @@
     font-weight: 600;
     margin-left: 30px;
     margin-right: 30px;
+    
   }
-  
+  .buttonCadastroProd:hover{
+    background-color: black;
+  }
   .inputboxCadastroProd {
     position: relative;
     margin: 15px 0;

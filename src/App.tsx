@@ -22,7 +22,7 @@ function App() {
     <CartProvider>
       <AuthProvider>
         <BrowserRouter>
-          <Navbar />
+          <Navbar/>
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -37,12 +37,12 @@ function App() {
               <Route path="/produtos" element={<ListaProdutos />} />
               <Route path="/produtos/novo" element={<FormularioProduto />} />
               <Route path="/produtos/editar/:id" element={<FormularioProduto />} />
-              <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/produtos/deletar/:id" element={<DeletarProduto />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
-          <Footer />
+          <Footer/>
         </BrowserRouter>
       </AuthProvider>
       </CartProvider>

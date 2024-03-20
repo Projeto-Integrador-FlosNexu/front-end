@@ -13,7 +13,10 @@ const Summary: FC<SummaryProps> = ({ total }) => {
         <div className='info'>
           <div>
             <span>Sub-total</span>
-            <span>R$ {total}</span>
+            <span>{Intl.NumberFormat('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'
+                        }).format(total)}</span>
           </div>
           <div>
             <span>Frete</span>
@@ -28,7 +31,10 @@ const Summary: FC<SummaryProps> = ({ total }) => {
         </div>
         <footer>
           <span>Total</span>
-          <span>R$ {total}</span>
+          <span> {Intl.NumberFormat('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'
+                        }).format(total)}</span>
         </footer>
       </div>
       <button>Finalizar Compra</button>

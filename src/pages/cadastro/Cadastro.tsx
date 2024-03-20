@@ -6,7 +6,12 @@ import './Cadastro.css'
 import logo from '../../assets/logoFN.png'
 import LogoGoogle from '../../assets/google.png';
 import { useGoogleLogin } from '@react-oauth/google';
-
+import nome from '../../assets/nome.png'
+import tipo from '../../assets/tipo.png'
+import email from '../../assets/emailogin.png'
+import senha from '../../assets/senha.png'
+import confirmsenha from '../../assets/confirmarsenha.png'
+import foto from '../../assets/foto.png'
 /*import LogoGit from '../../assets/github.png'; ESSE É O LOGO TIPO DO BOTAO DO GITHUB*/
 
 function Cadastro() {
@@ -81,9 +86,9 @@ function Cadastro() {
 
   return (
     <>
-      <div className="fundoCadastro ">
-        <div className='posicaoLogo ml-12 mr-20 text-center'>
-          <img src={logo} alt="Logo FlosNexu" />
+      <div className="fundoCadastro mobilemax:hidden">
+        <div className='posicaoLogo ml-12 mr-20 text-center w-[50rem]'>
+          <img src={logo} alt="Logo FlosNexu" className='w-[190rem]'/>
           <div className='ml-5'>
             <p className='slogan'>
               <span></span>
@@ -93,9 +98,9 @@ function Cadastro() {
         <div className='conteudo'>
           <div className='form-boxCadastro'>
             <form onSubmit={cadastrarNovoUsuario}>
-              <h2 className='text-white text-4xl mb-3 mt-6 ml-'>Cadastrar</h2>
+              <h2 className='text-white text-4xl mb-3 mt-6'>Cadastrar</h2>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204321146200264744/user_1.png?ex=65d44e78&is=65c1d978&hm=67ab9c2abc91dfa403b2f67d5dd76630abf6ec2a1c6ea39db2536a4c89ef246c&' />
+                <img src={nome} />
                 <div className="inputboxCadastro">
                   <input
                     type="text"
@@ -109,7 +114,7 @@ function Cadastro() {
                 </div>
               </div>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204321565743915041/envelope-simple_1.png?ex=65d44edc&is=65c1d9dc&hm=902287b6d2b600a336afa258d4c592610b8aab709885c626ceb97f5983acfd0f&' />
+                <img src={email} />
                 <div className="inputboxCadastro">
                   <input
                     type="text"
@@ -123,7 +128,7 @@ function Cadastro() {
                 </div>
               </div>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204323382657552394/identification-card.png?ex=65d4508d&is=65c1db8d&hm=3c962330883bd1fc71fe71ed9f90798fac9c2a858056bf8b6b87b799732975a9&' />
+                <img src={tipo} />
                 <div className="inputboxCadastro">
                   <input
                     type="text"
@@ -137,7 +142,7 @@ function Cadastro() {
                 </div>
               </div>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204323543480008755/camera.png?ex=65d450b4&is=65c1dbb4&hm=3e0368cd2d70e83214aa29a57fe68085613352f96af3397f30fe165a628f43d2&' />
+                <img src={foto} />
                 <div className="inputboxCadastro">
                   <input
                     type="text"
@@ -151,7 +156,7 @@ function Cadastro() {
                 </div>
               </div>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204323683972161566/image.png?ex=65d450d5&is=65c1dbd5&hm=e266b401479af7fab9d6a75aefb0d5d69dc8f72194a37d1c63b6caad82dc75ac&' />
+                <img src={senha} />
                 <div className="inputboxCadastro">
                   <input
                     type="password"
@@ -165,7 +170,7 @@ function Cadastro() {
                 </div>
               </div>
               <div className='input-containerCadastro'>
-                <img src='https://cdn.discordapp.com/attachments/1202676755547037716/1204324906750320640/lock-laminated.png?ex=65d451f9&is=65c1dcf9&hm=e9553807fdc65fb4209ba7ce990feac2d5120a81e8b96914ec7080c87c5546fe&' />
+                <img src={senha} className=' mb-28 '/>
                 <div className="inputboxCadastro">
                   <input
                     type="password"
@@ -179,26 +184,134 @@ function Cadastro() {
                 </div>
               </div>
               <div className="flex justify-around w-full gap-8">
-                <button className='buttonCadastro rounded-3xl text-white py-1.5 flex justify-center' type='submit'>
+                <button className='buttonCadastro  text-white py-1.5 flex justify-center' type='submit'>
                   Cadastrar
                 </button>
               </div>
               <button className='buttonGoogle mt-3'>
                 <div onClick={() => login()} className='flex justify-center gap-4'>
-                  <img src={LogoGoogle} className="w-5" alt="GoogleImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Cadastrar com o Google</span>
+                  <img src={LogoGoogle} className="w-8" alt="GoogleImg" />
+                  <span className="block font-medium tracking-wide text-white w-max">Cadastrar com o Google</span>
                   </div>
               </button>
-              {/* <button className='buttonGitHub'>
-                <div className='flex justify-center gap-4'>
-                  <img src={LogoGit} className="w-5" alt="GitImg" />
-                  <span className="block text-sm font-medium tracking-wide text-white w-max">Continuar com o GitHub</span>
-                </div>
-              </button> ESSE É O BOTAO SEM A LOGICA PARA FAZER CADASTRO COM O GITHUB*/}
+             
             </form>
           </div>
         </div>
       </div>
+      {/* mobile */}
+      <div className="fundoCadastro flex-col flex mobilemin:hidden">
+
+        <div className=''>
+          <div className='imagemflos'>
+            <img className='w-[27rem] ml-24' src={logo} />
+          </div>
+          <div className='form-boxCadastro ml-12 w-[30rem] items-center'>
+            <form onSubmit={cadastrarNovoUsuario}>
+              <h2 className='text-white text-4xl mb-3 mt-8 ml-[9rem]'>Cadastrar</h2>
+              <div className='input-containerCadastro'>
+                <img src={nome} />
+                <div className="inputboxCadastro">
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Nome"
+                    className="placeholderCadastro rounded-3xl border-2 border-slate-700 p-2"
+                    value={usuario.nome}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastro'>
+                <img src={email} />
+                <div className="inputboxCadastro">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Seu Email"
+                    className="placeholderCadastro rounded-3xl border-2 border-slate-700 p-2"
+                    value={usuario.email}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastro'>
+                <img src={tipo} />
+                <div className="inputboxCadastro">
+                  <input
+                    type="text"
+                    id="tipo"
+                    name="tipo"
+                    placeholder="Tipo de Usuario"
+                    className="placeholderCadastro rounded-3xl border-2 border-slate-700 p-2"
+                    value={usuario.tipo}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastro'>
+                <img src={foto} />
+                <div className="inputboxCadastro">
+                  <input
+                    type="text"
+                    id="foto"
+                    name="foto"
+                    placeholder="Foto"
+                    className="placeholderCadastro rounded-3xl border-2 border-slate-700 p-2"
+                    value={usuario.foto}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastro'>
+                <img src={senha} />
+                <div className="inputboxCadastro">
+                  <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Senha"
+                    className="placeholderCadastro rounded-3xl border-2 border-slate-700 p-2"
+                    value={usuario.senha}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                  />
+                </div>
+              </div>
+              <div className='input-containerCadastro'>
+                <img src={senha} className=' mb-28 ' />
+                <div className="inputboxCadastro">
+                  <input
+                    type="password"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Confirmar Senha"
+                    className="placeholderCadastro rounded-3xl  border-2 border-slate-700 p-2"
+                    value={confirmaSenha}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
+                  />
+                </div>
+              </div>
+              <div className="flex justify-around w-full gap-8">
+                <button className='buttonCadastro ml-[5rem] text-white py-1.5 flex justify-center' type='submit'>
+                  Cadastrar
+                </button>
+              </div>
+              <button className='buttonGoogle mt-3 ml-[5rem]'>
+                <div onClick={() => login()} className='flex justify-center gap-4'>
+                  <img src={LogoGoogle} className="w-8" alt="GoogleImg" />
+                  <span className="block font-medium tracking-wide text-white w-max">Cadastrar com o Google</span>
+                </div>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
     </>
   )
 }

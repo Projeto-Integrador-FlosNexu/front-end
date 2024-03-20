@@ -1,409 +1,458 @@
-@import url('https://fonts.googleapis.com/css2?family=Moulpali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 html,
 .bodyhome {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Moulpali", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 10px;
 }
+
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
 /* Navbar section */
 
 .nav {
-    display: flex;
-    width:900px;
-    height: 65px;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
-    z-index: 2;
-    COLOR:WHITE;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  display: flex;
+  width: 900px;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  z-index: 2;
+  COLOR: WHITE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
+
 .caixanav {
-    width: 60vw;
-    background-color: #ddd;
-    height: 70px;
-    display: flex;
-    margin-left: 10%;
-    border-radius: 17px;
-    align-items: center;
-    justify-content: flex-start; /* Correção aqui */
-    color: black;
-    font-family: "Moulpali", sans-serif;
-    font-size: larger;
-    font-weight: bold;
+  width: 60vw;
+  background-color: #ddd;
+  height: 70px;
+  display: flex;
+  margin-left: 10%;
+  border-radius: 17px;
+  align-items: center;
+  justify-content: flex-start;
+  /* Correção aqui */
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 @-webkit-keyframes inM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes inM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes outM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 @keyframes outM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 @-webkit-keyframes inT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes inT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @keyframes outT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes inBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes inBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 @keyframes outBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
 }
 
 
-@media all and (max-width:700px){
+@media all and (max-width:700px) {}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  color: black;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border-radius: 40px;
+  /* position: fixed; */
+  top: 2.6%;
+  font-size: 17px;
+}
+
+.dropbtnperfil {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border-radius: 40px;
+  position: fixed;
+  top: 2.6%;
+  font-size: 17px;
+  width: 100px;
 
 }
-  .dropdown {
-    float: left;
-    overflow: hidden;
-    color: black;
-  }
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: black;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    border-radius: 40px;
-    /* position: fixed; */
-    top:2.6%;
-    font-size:17px;
-  }
-  .dropbtnperfil{
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: black;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    border-radius: 40px;
-    position: fixed;
-    top:2.6%;
-    font-size:17px;
-    width: 100px;
-   
-  }
-  .dropbtnperfiladm { 
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: black;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    border-radius: 40px;
-    position: fixed;
-    top:2.6%;
-    font-size:17px;
-    width: 100px;
-   
-   
-  }
-  .dropdown-content {
-    display: none;
-    background-color: #f9f9f9;
-    z-index: 2;
-    position: fixed;
-    top:9%;
-    font-size:17px;
-    height: fit-content;
-    border-radius: 10px;
-  }
- 
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border: 0cm;
-    height: 57px;
 
-  }
+.dropbtnperfiladm {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border-radius: 40px;
+  position: fixed;
+  top: 2.6%;
+  font-size: 17px;
+  width: 100px;
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-    height: 200px;
-  }
 
-  .dropdown .dropbtn:hover{
-    color:rgb(130,211,56);
-    text-decoration: underline;
-    float: none;
-  }
-  
-  .dropdown-content a:hover {
-    border-radius: 10px;
-  }
-  .dropdownperfil {
-    position: absolute;
-    display: inline;
-    margin-left: 930px;
-  }
-  .dropdownperfiladm {
-    position: absolute;
-    display: inline;
-    margin-left: 930px;
-  }
-  .dropdown-contentperfil {
-    display: none;
-    background-color: #f9f9f9;
-    z-index: 2;
-    position: fixed;
-    top:9%;
-    font-size:17px;
-    height: 100px;
-    border-radius: 10px;
-    align-items: start;
-  }
-  .dropdown-contentperfiladm {
-    display:none;
-    background-color: #f9f9f9;
-    z-index: 2;
-    position: fixed;
-    top:9%;
-    font-size:17px;
-    height: fit-content;
-    border-radius: 10px;
-    align-items: start;
-    
-  }
-  
-  .dropdownperfil:hover .dropdown-contentperfil {
-    display: block;
-    height: 80px;
-    
-  }
-  .dropdownperfiladm:hover .dropdown-contentperfiladm {
-    display: block;
-    height: 170px;
-    
-  }
-  .dropdown-contentperfil a {
-    float: none;
-    color: black;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border: 0cm;
-    height: 57px;
-   
-  }
-  .dropdown-contentperfiladm a {
-    float: none;
-    color: black;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border: 0cm;
-    height: 57px;
-   
-  }
-  .dropdown-contentperfiladm a:hover {
-    float: none;
-    color:rgb(130,211,56);
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border: 0cm;
-    height: 57px;
-   text-decoration: underline;
-  }
-  .dropdown-contentperfil a:hover {
-    float: none;
-    color:rgb(130,211,56);
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border: 0cm;
-    height: 57px;
-   text-decoration: underline;
-  }
-  
-  .barrapesquisa{
-    top: 8%; /* Posiciona o elemento na metade superior da tela */
-    left: 44%; /* Posiciona o elemento na metade esquerda da tela */
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    position: fixed;
-    font-size: 20px;
-    background: transparent;
-  }
-  
-  .inputpesquisa{
-    width: 200px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-   
-  }
-  .imglogo{
-    width: 200px;
-   
-  }
-  .carrinho{
-    position: absolute;
-    margin-top: -1.9rem;
-    margin-left: -1rem;
-  }
-  .imagemperfil{
-    position: absolute;
-    margin-top: -1.6rem;
-    margin-left: 8rem;
-  }
-  .servico{
-    margin-left:9px;
-  }
-
-  .sobre{
-    margin-left:9px;
-    margin-right: 20px;
-  }
-
-  .home{
-    margin-left:50px;
-    margin-right: 10px;
-  }
-.lupa{
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
 }
+
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  z-index: 2;
+  position: fixed;
+  top: 9%;
+  font-size: 17px;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 0cm;
+  height: 57px;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  height: 200px;
+}
+.dropdown-content:hover{
+
+float: none;
+}
+.dropdown .dropbtn:hover {
+  color: rgb(130, 211, 56);
+  text-decoration: underline;
+  float: none;
+}
+
+.dropdown-content a:hover {
+  border-radius: 10px;
+}
+
+.dropdownperfil {
+  position: absolute;
+  display: inline;
+  margin-left: 930px;
+}
+
+.dropdownperfiladm {
+  position: absolute;
+  display: inline;
+  margin-left: 930px;
+}
+
+.dropdown-contentperfil {
+  display: none;
+  background-color: #f9f9f9;
+  z-index: 2;
+  position: fixed;
+  top: 9%;
+  font-size: 17px;
+  height: fit-content;
+  border-radius: 10px;
+  align-items: start;
+}
+
+.dropdown-contentperfiladm {
+  display: none;
+  background-color: #f9f9f9;
+  z-index: 2;
+  position: fixed;
+  top: 9%;
+  font-size: 17px;
+  height: fit-content;
+  border-radius: 10px;
+  align-items: start;
+
+}
+
+.dropdownperfil:hover .dropdown-contentperfil {
+  display: block;
+  height: 80px;
+
+}
+
+.dropdownperfiladm:hover .dropdown-contentperfiladm {
+  display: block;
+  height: 170px;
+
+}
+
+.dropdown-contentperfil a {
+  float: none;
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 0cm;
+  height: 57px;
+
+}
+
+.dropdown-contentperfiladm a {
+  float: none;
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 0cm;
+  height: 57px;
+
+}
+
+.dropdown-contentperfiladm a:hover {
+  float: none;
+  color: rgb(130, 211, 56);
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 0cm;
+  height: 57px;
+  text-decoration: underline;
+}
+
+.dropdown-contentperfil a:hover {
+  float: none;
+  color: rgb(130, 211, 56);
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 0cm;
+  height: 57px;
+  text-decoration: underline;
+}
+
+.barrapesquisa {
+  top: 8%;
+  /* Posiciona o elemento na metade superior da tela */
+  left: 44%;
+  /* Posiciona o elemento na metade esquerda da tela */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: fixed;
+  font-size: 20px;
+  background: transparent;
+}
+
+.inputpesquisa {
+  width: 200px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+
+}
+
+.imglogo {
+  width: 200px;
+
+}
+
+.carrinho {
+  position: absolute;
+  margin-top: -1.9rem;
+  margin-left: -1rem;
+}
+
+.imagemperfil {
+  position: absolute;
+  margin-top: -1.6rem;
+  margin-left: 8rem;
+}
+
+.servico {
+  margin-left: 9px;
+}
+
+.sobre {
+  margin-left: 9px;
+  margin-right: 20px;
+}
+
+.home {
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.lupa {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
 .icon {
-    /* Ajuste o tamanho do ícone conforme necessário */
-    /* Mantém a proporção da imagem */
-    margin-top: 1.3rem; /* Ajuste o espaçamento entre o ícone e o texto */
-  }
+  /* Ajuste o tamanho do ícone conforme necessário */
+  /* Mantém a proporção da imagem */
+  margin-top: 1.3rem;
+  /* Ajuste o espaçamento entre o ícone e o texto */
+}

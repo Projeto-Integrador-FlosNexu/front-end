@@ -9,54 +9,58 @@ import './Cart.css'
 
 function Cart() {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const { items, limparCart } = useContext(CartContext)
+  const { items, limparCart } = useContext(CartContext)
 
-      
-      const getTotal = () => {
-        let sum = 0;
-    
-        for (let item of items) {
-          sum += item.preco * item.quantidade;
-        }
-    
-        return sum;
-      };
-    
-      const cartTotal = getTotal();
-    
-    return (
-      <div className="fundocartinho">
-        <div className="
-                bg-gray-200 
-                flex 
-                flex-col
-                justify-center
-                ">
 
-            <h1 className="text-4xl text-center my-4">
-                Carrinho de Compras
-            </h1>
-            <h2 className="text-2xl text-center my-4">
-                {items.length === 0 ? 'O Carrinho está vazio!' : ''}
-            </h2>
-            <div className='container mx-auto my-4 grid grid-cols-1 
+  const getTotal = () => {
+    let sum = 0;
+
+    for (let item of items) {
+      sum += item.preco * item.quantidade;
+    }
+
+    return sum;
+  };
+
+  const cartTotal = getTotal();
+
+  return (
+    <div className="fundocartinho">
+      <div className="bg-transparent flex-row-reverse w-4/6 mr-72 mobilemax:hidden">
+      <h1 className="text-4xl mt-[-10px] text-center ">
+            Carrinho de Compras
+          </h1>
+
+          <h2 className="text-2xl text-center my-4">
+            {items.length === 0 ? 'O Carrinho está vazio!' : ''}
+          </h2>
+        <div className=" mt-[-100px] bg-gray-200 flex h-[800px] w-[1300px] flex-col justify-center">
+          <div>
+            <div className='container mt-[-30px] grid grid-cols-1 
                             md:grid-cols-2 lg:grid-cols-5 gap-4'>
-                {
-                    items.map(produto => (
-                        <CardCart key={produto.id} item={produto} />
-                    ))
-                }
+              {
+                items.map(produto => (
+                  <CardCart key={produto.id} item={produto} />
+                ))
+              }
             </div>
-
-            
-            <aside>
+          </div>
+          <aside className="ml-[800px] mt-[-360px]">
             <Summary total={cartTotal} />
           </aside>
-        </div>
+          
+
+
+
+          
+
         </div>
         
-    )
+      </div>
+    </div>
+
+  )
 }
 export default Cart;

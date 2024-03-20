@@ -151,7 +151,7 @@ function FormularioProduto() {
 
   return (
     <>
-      <div className='fundoCadastroProd mobilemax:hidden'>
+      <div className='fundoCadastroProd mobilemax:hidden text-xl'>
         <div className='conteudoCP'>
 
           <div className='form-boxCadastroProd'>
@@ -241,8 +241,8 @@ function FormularioProduto() {
               </div>
               <div className='input-containerCadastroProd ml-24'>
 
-                <select name="categoria" id="categoria" className='inputboxCadastroProd placeholderCadastroProd rounded-2xl w-60 text-black border-2 border-slate-700 p-2 bg-white' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
-                  <option className='text-black bg-white' value="" selected disabled>Selecione uma categoria</option>
+                <select name="categoria" id="categoria" className=' inputboxCadastroProd placeholderCadastroProd rounded-2xl w-[17rem] mr-[6rem] text-black border-2 border-slate-700 p-2 bg-white' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
+                  <option className='text-black  bg-white' value="" selected disabled>Selecione uma categoria</option>
                   {categorias.map((categoria) => (
                     <option key={categoria.id} className='bg-white w-50' value={categoria.id}>{categoria.nome}</option>
                   ))}
@@ -251,11 +251,11 @@ function FormularioProduto() {
               <div className="flex mx-auto mb-3">
 
 
-                <button className="buttonCadastroProd border-2 border-[#82D338] hover:underline rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-2" onClick={back}>
+                <button className="buttonCadastroProd border-2 border-[#82D338] rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-2" onClick={back}>
                   Voltar
                 </button>
 
-                <button disabled={carregandoCategoria} type='submit' className='buttonCadastroProd border-2 border-[#82D338] hover:underline rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-2'>
+                <button disabled={carregandoCategoria} type='submit' className='buttonCadastroProd border-2 border-[#82D338] rounded-2xl bg-white text-center text-[#82D338] py-2 px-4 mb-2'>
                   {isLoading ?
 
                     <RotatingLines
@@ -286,7 +286,7 @@ function FormularioProduto() {
 
           <div className='mt-[-10px] form-boxCadastroProd w-[300px] p-1 mb-10'>
             <form onSubmit={gerarNovoProduto}>
-              <h2 className='text-white text-5xl mb-3 ml-3 mt-9'>MOBILE</h2>
+              <h2 className='text-white text-5xl mb-3 ml-28 mt-9'>PRODUTO</h2>
               <div className='input-containerCadastroProd ml-24 '>
 
                 <div className='inputboxCadastroProd mb-3'>

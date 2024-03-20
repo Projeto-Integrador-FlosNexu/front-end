@@ -1,21 +1,19 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import CardProduto from '../cardProdutos/CardProdutos';
 import CardProdutoUsuario from "../cardProdutoUsuario/CardProdutoUsuario";
 import Editar from '../../../assets/Editar.png';
+import Deletar from '../../../assets/deletar.png'
+import './Lista.css'
 
 function ListaProdutos() {
     let ListaProdutosComponent;
     const [produtos, setProdutos] = useState<Produto[]>([]);
-    const [search, setSearch] = useState("");
-    let navigate = useNavigate();
-
-    const [selected, setSelected] = useState<{ nome: string; checked: boolean }[]>([]);
-    const { usuario, handleLogout } = useContext(AuthContext);
+    const [search] = useState("");
+    const [selected] = useState<{ nome: string; checked: boolean }[]>([]);
+    const { usuario } = useContext(AuthContext);
     // const token = usuario.token;
 
     // useEffect(() => {
@@ -40,9 +38,6 @@ function ListaProdutos() {
     useEffect(() => {
         buscarProdutos();
     }, [produtos.length]);
-    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearch(e.target.value);
-    };
 
     const selectedArray = selected
         .filter((item) => item.checked === true)
@@ -60,8 +55,7 @@ function ListaProdutos() {
     if (usuario.tipo === "adm") {
         ListaProdutosComponent = (
             <>
-                <div className='section'>
-
+                <div className='fundoLista'>
                     <div className=" bg-transparent flex-row-reverse ml-[346px] ounded-t-lg p-5 mt-40 w-4/6 mobilemax:hidden">
                         {/* Pagina Produtos */}
 
@@ -71,7 +65,7 @@ function ListaProdutos() {
 
                                 {/* Botão "Add Produto" */}
                                 <Link to={`/produtos/novo`}>
-                                    <button className="bg-black ml-[570px] text-[#82D338] items-center justify-between px-6 py-2 flex text-2xl rounded-full font-normal">Cadastrar Produto</button>
+                                    <button className="bg-black ml-[500px] text-[#82D338] items-center justify-between px-6 py-2 flex text-2xl rounded-full font-normal">Cadastrar Produto</button>
                                 </Link>
                             </div>
                             <table className=" bg-white border flex-row-reverse w-4/6 rounded-md overflow-hidden">
@@ -89,6 +83,9 @@ function ListaProdutos() {
                                             {/* Link para a página de edição */}
                                             <Link to={`/produtos/editar/${produto.id}`}>
                                                 <img src={Editar} alt="Botão de editar" className="w-6 mr-2 ml-8 pt-4" />
+                                            </Link>
+                                            <Link to={`/produtos/deletar/${produto.id}`}>
+                                                <img src={Deletar} alt="Botão de editar" className="w-6 mr-2 ml-8 pt-4" />
                                             </Link>
                                             <td className="py-2 px-4 border-b ">
                                                 <img src={produto.foto} alt="Product" className=" w-16 -mb-3 rounded-full" />
@@ -117,17 +114,34 @@ function ListaProdutos() {
             <>
 
                 {/* Pagina Produtos */}
-                <div className='mt-14'>
-                    <div className=" flex justify-center mt-3 p-3 text-white text-3xl font-bold bg-[#080808]">
+                <div className='fundoLista mobilemax:hidden'>
+                    <div className='mt-[22rem]'>
+                        <div className=" flex justify-center mt-3 p-4  text-white text-6xl font-bold">
+                            <h1>Produtos</h1>
+                        </div>
+                        <div className="flex flex-wrap">
 
-                        <h1>Produtos</h1>
+                            <div className="flex flex-wrap justify-center gap-10 mt-7 p-3">
+                                {filteredProdutos.map((produto) => (
+                                    <CardProdutoUsuario key={produto.id} produto={produto} />
+                                ))}
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex gap-3 justify-space-evenly">
+                </div>
+                {/* MOBILE */}
+                <div className='fundoListaMobile mobilemin:hidden'>
+                    <div className=''>
+                        <div className=" flex justify-center p-4  text-white text-6xl font-bold">
+                            <h1>Produtos</h1>
+                        </div>
+                        <div className="flex flex-wrap">
 
-                        <div className="flex flex-wrap justify-center gap-3 mt-7 p-3">
-                            {filteredProdutos.map((produto) => (
-                                <CardProdutoUsuario key={produto.id} produto={produto} />
-                            ))}
+                            <div className="flex flex-wrap justify-center gap-4 mt-7 p-3">
+                                {filteredProdutos.map((produto) => (
+                                    <CardProdutoUsuario key={produto.id} produto={produto} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

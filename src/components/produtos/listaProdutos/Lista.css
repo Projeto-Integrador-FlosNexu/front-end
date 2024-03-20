@@ -1,10 +1,29 @@
+.fundoLista{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #000000, #000000, #538921, #32570f);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
 
-  .section {
-  
-   
-    background: linear-gradient(45deg, #000000, #000000, #538921, #32570f);
-  
-    animation: colors 10s ease infinite;
-  
-  }
-  
+}
+.fundoListaMobile {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  display: flex;
+ 
+  justify-content: center;
+  height: 700vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #000000, #000000, #538921, #32570f);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
+}

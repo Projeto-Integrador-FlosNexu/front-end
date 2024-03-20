@@ -5,6 +5,7 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     position: relative;
     background: linear-gradient(0deg, rgb(219, 220, 226) 0%, rgba(219, 220, 226) 5%, rgba(219, 220, 226) 43%);
+    color:black;
 }
 
 .user-picture {
