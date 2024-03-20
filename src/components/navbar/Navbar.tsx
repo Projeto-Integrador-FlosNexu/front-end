@@ -93,8 +93,8 @@ function Navbar() {
                     <button className="dropbtn">PRODUTOS
                     </button>
                     <div className="dropdown-content ">
-                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Painel Solar</Link>
-                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Bateria Solar</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Painel Solar</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Bateria Solar</Link>
                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Materias de Construção</Link>
                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Outros</Link>
                     </div>
@@ -173,7 +173,7 @@ function Navbar() {
                               <Menu.Item>
                                 {({ active }) => (
                                   <Link
-                                    to="/"
+                                    to="/home"
                                     className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                   >
                                     Home
@@ -217,7 +217,7 @@ function Navbar() {
                       </div>
                       <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center m2">
-                          <img src={LogoVerde} alt="Paint logo" className='w-[16rem] p-1' />
+                          <img src={LogoVerde} alt="Paint logo" className='w-[16rem] p-1' /><Link to='/home'></Link>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                           <div className="flex space-x-4">
@@ -241,15 +241,73 @@ function Navbar() {
                         <Link to='/cart'><img src={ShoppingCart1} alt="Carrinho" className="w-9" /></Link>
 
                         {/* Profile dropdown */}
-                        <Menu as="div" className="flex gap-5">
-                          <div>
-                            <Link to={'/login'}>
-                              <img
-                                className="h-8 w-8 rounded-full"
-                                src={usercircle}
-                                alt=""
-                              /></Link>
-                          </div>
+                        <Menu as="div" className="flex gap-5 ml[-10px]">
+
+                          <Menu as="div" className="relative m">
+                            <div>
+
+                              <Menu.Button className="relative flex  text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                <span className="absolute -inset-1.5" />
+                                <span className="sr-only"></span>
+                                <img
+                                  className="h-10 w-8 bg-black"
+                                  src={usercircle}
+                                />
+                              </Menu.Button>
+                            </div>
+                            <Transition
+                              as={Fragment}
+                              enter="transition ease-out duration-100"
+                              enterFrom="transform opacity-0 scale-95"
+                              enterTo="transform opacity-100 scale-100"
+                              leave="transition ease-in duration-75"
+                              leaveFrom="transform opacity-100 scale-100"
+                              leaveTo="transform opacity-0 scale-95"
+                            >
+                              <Menu.Items className="absolute z-10 ml-[-79px] mt-2 w-45 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                <Menu.Item>
+                                  {({ active }) => (
+                                    <Link
+                                      to="/perfil"
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                    >
+                                     Perfil
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                  {({ active }) => (
+                                    <Link
+                                      to="/produtos/novo"
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                    >
+                                      Cadastrar Produtos
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                  {({ active }) => (
+                                    <Link
+                                      to='/cadastroCategoria'
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                    >
+                                      Cadastro Categoria
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                  {({ active }) => (  
+                                    <Link
+                                    to='/home'
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                      onClick={logout}>Sair
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                              </Menu.Items>
+
+                            </Transition>
+                          </Menu>
                         </Menu>
                       </div>
                     </div>
@@ -388,7 +446,7 @@ function Navbar() {
                       </div>
                       <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center m2">
-                          <img src={LogoVerde} alt="Paint logo" className='w-[16rem] p-1' />
+                          <img src={LogoVerde} alt="Paint logo" className='w-[16rem] p-1' /><Link to='/home'></Link>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                           <div className="flex space-x-4">
@@ -486,7 +544,7 @@ function Navbar() {
                       <Link to='/home' className='-mt-8' onClick={logout}>Sair</Link>
                     </div>
                   </div>
-                  
+
                   <Link to='/cart' className='pl-[32%]'><img src={ShoppingCart} alt="Carrinho" className="  mt-0" /></Link>
 
                 </ul>
@@ -596,15 +654,54 @@ function Navbar() {
                         <Link to='/cart'><img src={ShoppingCart1} alt="Carrinho" className="w-9" /></Link>
 
                         {/* Profile dropdown */}
-                        <Menu as="div" className="flex gap-5">
-                          <div>
-                            <Link to={'/login'}>
-                              <img
-                                className="h-8 w-8 rounded-full"
-                                src={usercircle}
-                                alt=""
-                              /></Link>
-                          </div>
+                        <Menu as="div" className="flex gap-5 ml[-10px]">
+
+                          <Menu as="div" className="relative m">
+                            <div>
+
+                              <Menu.Button className="relative flex  text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                <span className="absolute -inset-1.5" />
+                                <span className="sr-only"></span>
+                                <img
+                                  className="h-10 w-8 bg-black"
+                                  src={usercircle}
+                                />
+                              </Menu.Button>
+                            </div>
+                            <Transition
+                              as={Fragment}
+                              enter="transition ease-out duration-100"
+                              enterFrom="transform opacity-0 scale-95"
+                              enterTo="transform opacity-100 scale-100"
+                              leave="transition ease-in duration-75"
+                              leaveFrom="transform opacity-100 scale-100"
+                              leaveTo="transform opacity-0 scale-95"
+                            >
+                              <Menu.Items className="absolute z-10 ml-[-19px] mt-2 w-45 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                <Menu.Item>
+                                  {({ active }) => (
+                                    <Link
+                                      to="/perfil"
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                    >
+                                     Perfil
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                              
+                                <Menu.Item>
+                                  {({ active }) => (  
+                                    <Link
+                                    to='/home'
+                                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                      onClick={logout}>Sair
+                                    </Link>
+                                  )}
+                                </Menu.Item>
+                              </Menu.Items>
+
+                            </Transition>
+                          </Menu>
                         </Menu>
                       </div>
                     </div>

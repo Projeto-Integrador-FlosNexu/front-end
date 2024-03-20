@@ -48,6 +48,30 @@
   background-position-x: -130px;
   border-radius: 20px;
 }
+.conteudoCategMobile {
+  width: 70%;
+  height: 450px;
+  padding: 90px;
+  margin: auto;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.393),
+    -20px -20px 20px rgba(0, 0, 0, 0.393),
+    20px -20px 20px rgba(35, 35, 35, 0.474),
+    -20px 20px 20px rgba(35, 35, 35, 0.474);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  /* Cor do texto sobreposto */
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row-reverse;
+  background-position-x: -130px;
+  border-radius: 20px;
+}
 .imagemfloscateg{
   width:100vw
 }

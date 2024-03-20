@@ -112,7 +112,6 @@ function ListaProdutos() {
     } else {
         ListaProdutosComponent = (
             <>
-
                 {/* Pagina Produtos */}
                 <div className='fundoLista mobilemax:hidden'>
                     <div className='mt-[22rem]'>
