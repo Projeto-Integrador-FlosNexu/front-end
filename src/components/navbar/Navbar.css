@@ -12,10 +12,6 @@ html,
   font-size: 10px;
 }
 
-/*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
-
-/* Navbar section */
 
 .nav {
   display: flex;
@@ -41,7 +37,6 @@ html,
   border-radius: 17px;
   align-items: center;
   justify-content: flex-start;
-  /* Correção aqui */
   color: black;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -217,7 +212,6 @@ html,
   font-family: inherit;
   margin: 0;
   border-radius: 40px;
-  /* position: fixed; */
   top: 2.6%;
   font-size: 17px;
 }
@@ -395,9 +389,7 @@ float: none;
 
 .barrapesquisa {
   top: 8%;
-  /* Posiciona o elemento na metade superior da tela */
   left: 44%;
-  /* Posiciona o elemento na metade esquerda da tela */
   transform: translate(-50%, -50%);
   z-index: 2;
   position: fixed;
@@ -451,8 +443,5 @@ float: none;
 }
 
 .icon {
-  /* Ajuste o tamanho do ícone conforme necessário */
-  /* Mantém a proporção da imagem */
   margin-top: 1.3rem;
-  /* Ajuste o espaçamento entre o ícone e o texto */
 }

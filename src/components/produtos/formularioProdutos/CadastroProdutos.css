@@ -139,10 +139,6 @@ option{
   background-color: black;
 }
 
-option:nth-last-child(){
-  border-radius: 0 0 50% 50%;
-}
-
 .fundoForm{
   background-color: #3cb372eb;
   background: linear-gradient(to top, #3CB371 0%, rgb(255, 255, 255, 1) 45%)
