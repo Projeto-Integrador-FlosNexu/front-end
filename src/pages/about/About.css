@@ -1,5 +1,5 @@
  .fundo-about {
-  font-family: "Montserrat", sans-serif;
+   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
@@ -12,6 +12,7 @@
   background-size: 300% 300%;
   animation: colors 10s ease infinite;
 }
+
 
 .fundo-aboutMobile {
   font-family: "Montserrat", sans-serif;

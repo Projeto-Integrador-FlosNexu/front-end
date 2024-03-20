@@ -93,10 +93,10 @@ function Navbar() {
                     <button className="dropbtn">PRODUTOS
                     </button>
                     <div className="dropdown-content ">
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Painel Solar</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Bateria Solar</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Materias de Construção</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Outros</a>
+                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Painel Solar</Link>
+                       <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Bateria Solar</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Materias de Construção</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Outros</Link>
                     </div>
                   </div>
                   <Link to='/servicos' className='servico text-3xl'>SERVIÇOS</Link>
@@ -275,10 +275,10 @@ function Navbar() {
                     <button className="dropbtn">PRODUTOS
                     </button>
                     <div className="dropdown-content">
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Painel Solar</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Bateria Solar</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Materias de Construção</a>
-                      <a href="/produtos" className='hover:text-[#82d338] hover:underline'>Outros</a>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Painel Solar</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Bateria Solar</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Materias de Construção</Link>
+                      <Link to='/produtos' className='hover:text-[#82d338] hover:underline'>Outros</Link>
                     </div>
                   </div>
                   <Link to='/servicos' className='servico text-3xl'>SERVIÇOS</Link>
@@ -450,10 +450,10 @@ function Navbar() {
                     <button className="dropbtn font-bold">PRODUTOS
                     </button>
                     <div className="dropdown-content">
-                      <a href="/produtos" className='hover:bg-[#82d338] hover:underline'>Painel Solar</a>
-                      <a href="/produtos" className='hover:bg-[#82d338] hover:underline'>Bateria Solar</a>
-                      <a href="/produtos" className='hover:bg-[#82d338] hover:underline'>Materias de Construção</a>
-                      <a href="/produtos" className='hover:bg-[#82d338] hover:underline'>Outros</a>
+                      <Link to='/produtos' className='hover:bg-[#82d338] hover:underline'>Painel Solar</Link>
+                      <Link to='/produtos' className='hover:bg-[#82d338] hover:underline'>Bateria Solar</Link>
+                      <Link to='/produtos' className='hover:bg-[#82d338] hover:underline'>Materias de Construção</Link>
+                      <Link to='/produtos' className='hover:bg-[#82d338] hover:underline'>Outros</Link>
                     </div>
                   </div>
                   <Link to='/servicos' className='servico text-3xl'>SERVIÇOS</Link>
