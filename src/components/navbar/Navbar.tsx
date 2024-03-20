@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect, useRef, Fragment } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
-import './NavBar.css';
+import './Navbar.css';
 import { toastAlerta } from '../../util/toastAlerta';
 import login from '../../assets/login.png'
 import LogoVerde from '../../assets/Logozin.png'
